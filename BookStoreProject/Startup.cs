@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ManagerLayer.Interfaces;
+using ManagerLayer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,7 +13,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using RepositoyLayer.Context;
+using RepositoyLayer.Interfaces;
+using RepositoyLayer.Services;
 
 namespace BookStoreProject
 {
@@ -31,6 +36,37 @@ namespace BookStoreProject
             services.AddDbContext<BookStoreDBContext>
                 (options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
+            services.AddSwaggerGen(
+                 //This is for authurization
+                 option =>
+                 {
+                     option.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Book Api", Version = "v1" });
+                     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                     {
+                         In = ParameterLocation.Header,
+                         Description = "Please Enter valid Token ",
+                         Name = "Authorization",
+                         Type = SecuritySchemeType.Http,
+                         Scheme = "Bearer"
+                     });
+                     option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                     {
+                        {
+                new OpenApiSecurityScheme
+                {
+                    Reference=new OpenApiReference
+                    {
+                        Type=ReferenceType.SecurityScheme,
+                        Id="Bearer"
+                    }
+                },
+                new string[]{}
+            }
+                     });
+
+                 });
+            services.AddTransient<IUsersRepo, UsersRepo>();
+            services.AddTransient<IUsersManager, UsersManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +76,15 @@ namespace BookStoreProject
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+
+            /* This middleware serves the Swagger documentation UI.
+             * (https://www.pragimtech.com/blog/azure/how-to-use-swagger-in-asp.net-core-web-api/)
+             */
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API V1");
+            });
 
             app.UseHttpsRedirection();
 

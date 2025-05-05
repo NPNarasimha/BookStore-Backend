@@ -12,3 +12,6 @@ C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcore
 C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.dll
 C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.pdb
 C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.genruntimeconfig.cache
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\Reposito.7D963800.Up2Date

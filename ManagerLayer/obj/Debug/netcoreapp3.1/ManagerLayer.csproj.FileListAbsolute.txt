@@ -8,3 +8,9 @@ C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\obj\Debug\netcoreap
 C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\obj\Debug\netcoreapp3.1\ManagerLayer.sourcelink.json
 C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\obj\Debug\netcoreapp3.1\ManagerLayer.dll
 C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\obj\Debug\netcoreapp3.1\ManagerLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\obj\Debug\netcoreapp3.1\ManagerLayer.csproj.AssemblyReference.cache
+C:\Users\Sai Indu\source\repos\BookStoreProject\ManagerLayer\obj\Debug\netcoreapp3.1\ManagerL.73C23B7D.Up2Date

@@ -46,3 +46,12 @@ C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netco
 C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netcoreapp3.1\BookStoreProject.genruntimeconfig.cache
 C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\RepositoyLayer.dll
 C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\RepositoyLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\ManagerLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\ManagerLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netcoreapp3.1\BookStoreProject.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\CommonLayer.pdb
