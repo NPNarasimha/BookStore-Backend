@@ -2,6 +2,7 @@
 using System.Linq.Expressions;
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RepositoyLayer.Entity;
@@ -75,6 +76,17 @@ namespace BookStoreProject.Controllers
                 send.EmailSend(result.Email, result.Token);
                 return Ok(new ResponseModel<string> { Success = true, Message = "Reset link Sent to Email" });
             }
+        }
+        [Authorize]
+        [HttpPost("resetPassword")]
+        public IActionResult ResetPassword(ResetPasswordModel model)
+        {
+            string Email = User.FindFirst("EmailId").Value;
+            if (usersManager.ResetPassword(Email, model))
+            {
+                return Ok(new ResponseModel<bool> { Success = true, Message = Email + "Password changed Success" });
+            }
+           return BadRequest(new ResponseModel<bool> { Success = false, Message = "Password Not Changed" });
         }
     }
 }

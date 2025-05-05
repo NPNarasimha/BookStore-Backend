@@ -33,6 +33,9 @@ namespace ManagerLayer.Services
         {
             return usersRepo.forgetPassword(email);
         }
-
+        public bool ResetPassword(string email, ResetPasswordModel model)
+        {
+            return usersRepo.ResetPassword(email, model);
+        }
     }
 }

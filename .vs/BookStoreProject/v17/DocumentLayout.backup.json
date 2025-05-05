@@ -7,22 +7,6 @@
       "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\usersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\usersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\interfaces\\iusersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\interfaces\\iusersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,6 +17,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\iusersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\interfaces\\iusersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\usersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\usersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\forgetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +70,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "ResetPasswordModel.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\ResetPasswordModel.cs",
+              "RelativeDocumentMoniker": "CommonLayer\\Models\\ResetPasswordModel.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\ResetPasswordModel.cs",
+              "RelativeToolTip": "CommonLayer\\Models\\ResetPasswordModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:37:39.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SendEmail.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\SendEmail.cs",
               "RelativeDocumentMoniker": "CommonLayer\\Models\\SendEmail.cs",
@@ -74,12 +91,11 @@
               "RelativeToolTip": "CommonLayer\\Models\\SendEmail.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAowBUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T18:13:18.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T18:13:18.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ForgetPasswordModel.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\ForgetPasswordModel.cs",
               "RelativeDocumentMoniker": "CommonLayer\\Models\\ForgetPasswordModel.cs",
@@ -87,12 +103,11 @@
               "RelativeToolTip": "CommonLayer\\Models\\ForgetPasswordModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T18:03:28.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T18:03:28.18Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\appsettings.json",
               "RelativeDocumentMoniker": "BookStoreProject\\appsettings.json",
@@ -100,12 +115,11 @@
               "RelativeToolTip": "BookStoreProject\\appsettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-05T17:25:52.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T17:25:52.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BookStoreProject",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\BookStoreProject.csproj",
               "RelativeDocumentMoniker": "BookStoreProject\\BookStoreProject.csproj",
@@ -116,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Program.cs",
               "RelativeDocumentMoniker": "BookStoreProject\\Program.cs",
@@ -128,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Startup.cs",
               "RelativeDocumentMoniker": "BookStoreProject\\Startup.cs",
@@ -136,12 +150,11 @@
               "RelativeToolTip": "BookStoreProject\\Startup.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAGcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:56:00.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T16:56:00.052Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "CommonLayer\\Models\\LoginModel.cs",
@@ -159,46 +172,46 @@
               "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\UsersController.cs",
               "RelativeToolTip": "BookStoreProject\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAuwEwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwFkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T16:06:55.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "IUsersManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IUsersManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Interfaces\\IUsersManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IUsersManager.cs",
               "RelativeToolTip": "ManagerLayer\\Interfaces\\IUsersManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T11:00:59.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UsersManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\UsersManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Services\\UsersManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\UsersManager.cs",
               "RelativeToolTip": "ManagerLayer\\Services\\UsersManager.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvyEAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAUwCUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T11:00:22.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "IUsersRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IUsersRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Interfaces\\IUsersRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IUsersRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Interfaces\\IUsersRepo.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T10:53:47.725Z",
               "EditorCaption": ""
@@ -211,7 +224,7 @@
               "RelativeDocumentMoniker": "RepositoyLayer\\Services\\UsersRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\UsersRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Services\\UsersRepo.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAuwEIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAgwE0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T10:50:52.012Z",
               "EditorCaption": ""

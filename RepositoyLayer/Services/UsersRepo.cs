@@ -75,7 +75,20 @@ namespace RepositoyLayer.Services
             }
         }
 
-
+        public bool ResetPassword(string email, ResetPasswordModel model)
+        {
+            var user = this.BookStoreDb.Users.ToList().Find(user => user.Email == email);
+            if (user == null)
+            {
+                return false;
+            }
+            else
+            {
+                user.Password = EncryptionPass.EncodePasswordToBase64(model.ConformPassword);
+                this.BookStoreDb.SaveChanges();
+                return true;
+            }
+        }
         private string GenerateToken(string email, int userId)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
