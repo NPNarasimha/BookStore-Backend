@@ -18,5 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RepositoyLayer\RepositoyLayer.csproj" />
+  </ItemGroup>
+
 
 </Project>

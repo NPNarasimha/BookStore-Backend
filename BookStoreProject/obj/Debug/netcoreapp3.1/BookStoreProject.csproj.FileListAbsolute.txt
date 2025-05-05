@@ -44,3 +44,5 @@ C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netco
 C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netcoreapp3.1\BookStoreProject.dll
 C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netcoreapp3.1\BookStoreProject.pdb
 C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\obj\Debug\netcoreapp3.1\BookStoreProject.genruntimeconfig.cache
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\RepositoyLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\BookStoreProject\bin\Debug\netcoreapp3.1\RepositoyLayer.pdb
