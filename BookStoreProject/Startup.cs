@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using ManagerLayer.Interfaces;
 using ManagerLayer.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RepositoyLayer.Context;
 using RepositoyLayer.Interfaces;
@@ -65,6 +68,30 @@ namespace BookStoreProject
                      });
 
                  });
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                // Adding Jwt Bearer
+                .AddJwtBearer(o => {
+                    var Key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
+                    o.SaveToken = true;
+                    o.RequireHttpsMetadata = false;
+                    o.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = Configuration["Jwt:Issue"],
+                        ValidAudience = Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Key)
+                    };
+                });
+
+
             services.AddTransient<IUsersRepo, UsersRepo>();
             services.AddTransient<IUsersManager, UsersManager>();
         }
@@ -85,7 +112,7 @@ namespace BookStoreProject
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API V1");
             });
-
+            app.UseAuthentication();
             app.UseHttpsRedirection();
 
             app.UseRouting();

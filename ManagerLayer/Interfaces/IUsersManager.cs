@@ -10,5 +10,6 @@ namespace ManagerLayer.Interfaces
     {
         public Users RegisterUser(RegisterModel model);
         public bool CheckEmail(string email);
+        public string UserLogin(LoginModel model);
     }
 }

@@ -18,7 +18,7 @@ namespace BookStoreProject.Controllers
             this.usersManager = usersManager;
         }
 
-        [HttpPost("Register")]
+        [HttpPost("register")]
         public IActionResult RegisterUser(RegisterModel model)
         {
             try
@@ -47,6 +47,18 @@ namespace BookStoreProject.Controllers
                 { Success = false, Message = "An internal error occurred", Data = ex.Message });
             }
         }
+
+        [HttpPost("login")]
+        public IActionResult Login(LoginModel model)
+        {
+            var result = usersManager.UserLogin(model);
+            if (result == null)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "InValid User" });
+            }
+            return Ok(new ResponseModel<string> { Success = true, Message = model.Email+"Login Success", Data = result });
+        }
+
     }
 }
             
