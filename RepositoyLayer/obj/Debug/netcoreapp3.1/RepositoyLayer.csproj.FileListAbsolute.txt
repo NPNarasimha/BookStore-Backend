@@ -1,0 +1,14 @@
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.deps.json
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.runtimeconfig.json
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.runtimeconfig.dev.json
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\bin\Debug\netcoreapp3.1\RepositoyLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.csproj.AssemblyReference.cache
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.AssemblyInfoInputs.cache
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.AssemblyInfo.cs
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.sourcelink.json
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.dll
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\RepositoyLayer\obj\Debug\netcoreapp3.1\RepositoyLayer.genruntimeconfig.cache
