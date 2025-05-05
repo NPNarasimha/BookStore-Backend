@@ -58,8 +58,22 @@ namespace RepositoyLayer.Services
             }
         }
 
-       
-
+        public ForgetPasswordModel forgetPassword(string email)
+        {
+            var user = this.BookStoreDb.Users.ToList().Find(user => user.Email == email);
+            if (user == null)
+            {
+                return null;
+            }
+            else
+            {
+                var token = GenerateToken(user.Email, user.Id);
+                ForgetPasswordModel forgetPasswordModel = new ForgetPasswordModel();
+                forgetPasswordModel.Email = email;
+                forgetPasswordModel.Token = token;
+                return forgetPasswordModel;
+            }
+        }
 
 
         private string GenerateToken(string email, int userId)

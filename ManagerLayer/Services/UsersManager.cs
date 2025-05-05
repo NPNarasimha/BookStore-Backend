@@ -29,7 +29,10 @@ namespace ManagerLayer.Services
         {
             return usersRepo.UserLogin(model);
         }
-
+        public ForgetPasswordModel forgetPassword(string email)
+        {
+            return usersRepo.forgetPassword(email);
+        }
 
     }
 }

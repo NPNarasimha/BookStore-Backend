@@ -58,7 +58,24 @@ namespace BookStoreProject.Controllers
             }
             return Ok(new ResponseModel<string> { Success = true, Message = model.Email+"Login Success", Data = result });
         }
-
+        [HttpPost("forgetPassword")]
+        public IActionResult ForgetPassword(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Email is required" });
+            ForgetPasswordModel result =usersManager.forgetPassword(email);
+            
+            if (result == null)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Email Not Found" });
+            }
+            else
+            {
+                SendEmail send=new SendEmail();
+                send.EmailSend(result.Email, result.Token);
+                return Ok(new ResponseModel<string> { Success = true, Message = "Reset link Sent to Email" });
+            }
+        }
     }
 }
             
