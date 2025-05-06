@@ -11,5 +11,6 @@ namespace ManagerLayer.Interfaces
         public Admin adminRegister(AdminRegisterModel adminRegister);
         public bool CheckEmail(string email);
         public string AdminLogin(AdminLoginModel model);
+        public AdminForgotPasswordModel AdminForgotPassword(string email);
     }
 }

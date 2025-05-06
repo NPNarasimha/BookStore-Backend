@@ -61,6 +61,22 @@ namespace RepositoyLayer.Services
             }
         }
 
+        public AdminForgotPasswordModel AdminForgotPassword(string email)
+        {
+            var admin = this.bookStoreDb.Admins.ToList().Find(admin => admin.Email == email);
+            if (admin == null)
+            {
+                return null;
+            }
+            else
+            {
+                var token = GenerateToken(admin.Email, admin.Id, admin.Role);
+                AdminForgotPasswordModel adminForgotPasswordModel = new AdminForgotPasswordModel();
+                adminForgotPasswordModel.Email = email;
+                adminForgotPasswordModel.Token = token;
+                return adminForgotPasswordModel;
+            }
+        }
         private string GenerateToken(string email, int userId, string Role)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));

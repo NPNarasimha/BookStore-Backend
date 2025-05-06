@@ -54,7 +54,7 @@ namespace BookStoreProject.Controllers
         {
             try
             {
-               
+
                 var result = adminsManager.AdminLogin(model);
                 if (result == null)
                 {
@@ -67,6 +67,31 @@ namespace BookStoreProject.Controllers
                 return StatusCode(500, new ResponseModel<string>
                 { Success = false, Message = "An internal error occurred", Data = ex.Message });
 
+            }
+        }
+
+        [HttpPost("adminforgotpassword")]
+        public IActionResult ForgetPassword(string email)
+        {
+            try
+            {
+
+                var result = adminsManager.AdminForgotPassword(email);
+                if (result == null)
+                {
+                    return BadRequest(new ResponseModel<string> { Success = false, Message = "Email Not Found" });
+                }
+                else
+                {
+                    SendEmail send = new SendEmail();
+                    send.EmailSend(result.Email, result.Token);
+                    return Ok(new ResponseModel<string> { Success = true, Message = "Reset link Sent to Email" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseModel<string>
+                { Success = false, Message = "An internal error occurred", Data = ex.Message });
             }
         }
     }
