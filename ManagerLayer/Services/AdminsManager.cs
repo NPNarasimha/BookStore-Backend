@@ -25,5 +25,10 @@ namespace ManagerLayer.Services
             return adminsRepo.CheckEmail(email);
         }
 
+        public string AdminLogin(AdminLoginModel model)
+        {
+        return adminsRepo.AdminLogin(model);
+        }
+
     }
 }

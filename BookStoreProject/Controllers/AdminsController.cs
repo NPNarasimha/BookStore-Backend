@@ -49,6 +49,25 @@ namespace BookStoreProject.Controllers
                 { Success = false, Message = "An internal error occurred", Data = ex.Message });
             }
         }
+        [HttpPost("adminlogin")]
+        public IActionResult AdminLogin(AdminLoginModel model)
+        {
+            try
+            {
+               
+                var result = adminsManager.AdminLogin(model);
+                if (result == null)
+                {
+                    return BadRequest(new ResponseModel<string> { Success = false, Message = "Invalid Credentials" });
+                }
+                return Ok(new ResponseModel<string> { Success = true, Message = "Login successfull", Data = result });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseModel<string>
+                { Success = false, Message = "An internal error occurred", Data = ex.Message });
 
+            }
+        }
     }
 }

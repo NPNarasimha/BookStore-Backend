@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using CommonLayer.Models;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using RepositoyLayer.Context;
 using RepositoyLayer.EncodeDecodePass;
 using RepositoyLayer.Entity;
@@ -43,5 +46,38 @@ namespace RepositoyLayer.Services
             bookStoreDb.SaveChanges();
             return admin;
         }
+
+        public string AdminLogin(AdminLoginModel model)
+        {
+            var admin = this.bookStoreDb.Admins.FirstOrDefault(admin => admin.Email == model.Email && admin.Password == EncryptionPass.EncodePasswordToBase64(model.Password));
+            if (admin == null)
+            {
+                return null;
+            }
+            else
+            {
+                var token = GenerateToken(admin.Email, admin.Id, admin.Role);
+                return token;
+            }
+        }
+
+        private string GenerateToken(string email, int userId, string Role)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var claims = new[]
+            {
+                new Claim("EmailId",email),
+                new Claim("UserId",userId.ToString()),
+                new Claim("custom_role", Role)
+            };
+            var token = new JwtSecurityToken(config["Jwt:Issuer"],
+                config["Jwt:Audience"],
+                claims,
+                expires: DateTime.Now.AddHours(2),
+                signingCredentials: credentials);
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
     }
 }
