@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using ManagerLayer.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -15,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RepositoyLayer.Context;
@@ -52,20 +54,9 @@ namespace BookStoreProject
                          Type = SecuritySchemeType.Http,
                          Scheme = "Bearer"
                      });
-                     option.AddSecurityRequirement(new OpenApiSecurityRequirement
-                     {
-                        {
-                new OpenApiSecurityScheme
-                {
-                    Reference=new OpenApiReference
-                    {
-                        Type=ReferenceType.SecurityScheme,
-                        Id="Bearer"
-                    }
-                },
-                new string[]{}
-            }
-                     });
+                     //only for the Athurized Apis show the lockIcon(Athurization);
+                     //It is taken from the common Layer OperationFilters;
+                     option.OperationFilter<OperationFilters>();
 
                  });
 

@@ -59,7 +59,8 @@ namespace BookStoreProject.Controllers
                 var result = adminsManager.AdminLogin(model);
                 if (result == null)
                 {
-                    return BadRequest(new ResponseModel<string> { Success = false, Message = "Invalid Credentials" });
+                    return Unauthorized(new ResponseModel<string>
+                    { Success = false, Message = "Invalid email or password" });
                 }
                 return Ok(new ResponseModel<string> { Success = true, Message = "Login successfull", Data = result });
             }

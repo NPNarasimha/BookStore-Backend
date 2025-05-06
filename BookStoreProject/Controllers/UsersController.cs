@@ -55,7 +55,8 @@ namespace BookStoreProject.Controllers
             var result = usersManager.UserLogin(model);
             if (result == null)
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "InValid User" });
+                return Unauthorized(new ResponseModel<string>
+                { Success = false, Message = "Invalid email or password" });
             }
             return Ok(new ResponseModel<string> { Success = true, Message = model.Email+"Login Success", Data = result });
         }

@@ -1372,6 +1372,9 @@
         }
       },
       "CommonLayer/1.0.0": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.6.3"
+        },
         "runtime": {
           "CommonLayer.dll": {
             "assemblyVersion": "1.0.0",
