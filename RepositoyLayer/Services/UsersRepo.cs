@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -53,7 +54,7 @@ namespace RepositoyLayer.Services
             }
             else
             {
-                var token =GenerateToken(user.Email, user.Id);
+                var token =GenerateToken(user.Email, user.Id,user.Role);
                 return token;
             }
         }
@@ -67,7 +68,7 @@ namespace RepositoyLayer.Services
             }
             else
             {
-                var token = GenerateToken(user.Email, user.Id);
+                var token = GenerateToken(user.Email, user.Id,user.Role);
                 ForgetPasswordModel forgetPasswordModel = new ForgetPasswordModel();
                 forgetPasswordModel.Email = email;
                 forgetPasswordModel.Token = token;
@@ -89,14 +90,15 @@ namespace RepositoyLayer.Services
                 return true;
             }
         }
-        private string GenerateToken(string email, int userId)
+        private string GenerateToken(string email, int userId,string Role)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new[]
             {
                 new Claim("EmailId",email),
-                new Claim("UserId",userId.ToString())
+                new Claim("UserId",userId.ToString()),
+                new Claim("custom_role", Role)
             };
             var token = new JwtSecurityToken(config["Jwt:Issuer"],
                 config["Jwt:Audience"],

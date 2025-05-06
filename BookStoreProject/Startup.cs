@@ -94,6 +94,8 @@ namespace BookStoreProject
 
             services.AddTransient<IUsersRepo, UsersRepo>();
             services.AddTransient<IUsersManager, UsersManager>();
+            services.AddTransient<IAdminsRepo, AdminsRepo>();
+            services.AddTransient<IAdminsManager, AdminsManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
