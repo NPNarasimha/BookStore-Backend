@@ -49,7 +49,7 @@ namespace RepositoyLayer.Services
 
         public string AdminLogin(AdminLoginModel model)
         {
-            var admin = this.bookStoreDb.Admins.FirstOrDefault(admin => admin.Email == model.Email && admin.Password == EncryptionPass.EncodePasswordToBase64(model.Password));
+            var admin = this.bookStoreDb.Admins.FirstOrDefault(x => x.Email == model.Email && x.Password == EncryptionPass.EncodePasswordToBase64(model.Password));
             if (admin == null)
             {
                 return null;
@@ -75,6 +75,21 @@ namespace RepositoyLayer.Services
                 adminForgotPasswordModel.Email = email;
                 adminForgotPasswordModel.Token = token;
                 return adminForgotPasswordModel;
+            }
+        }
+        public bool AdminResetPassword(string email, AdminResetPasswordModel model)
+        {
+            var admin = this.bookStoreDb.Admins.ToList().Find(admin => admin.Email == email);
+            if (admin == null)
+            {
+                return false;
+            }
+            else
+            {
+                admin.Password = EncryptionPass.EncodePasswordToBase64(model.ConformPassword);
+                this.bookStoreDb.Admins.Update(admin);
+                bookStoreDb.SaveChanges();
+                return true;
             }
         }
         private string GenerateToken(string email, int userId, string Role)

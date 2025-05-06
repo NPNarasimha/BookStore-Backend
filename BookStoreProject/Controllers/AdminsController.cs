@@ -2,6 +2,7 @@
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using ManagerLayer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RepositoyLayer.Entity;
@@ -86,6 +87,29 @@ namespace BookStoreProject.Controllers
                     SendEmail send = new SendEmail();
                     send.EmailSend(result.Email, result.Token);
                     return Ok(new ResponseModel<string> { Success = true, Message = "Reset link Sent to Email" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseModel<string>
+                { Success = false, Message = "An internal error occurred", Data = ex.Message });
+            }
+        }
+        [Authorize]
+        [HttpPost("adminresetpassword")]
+
+        public IActionResult AdminResetPassword(AdminResetPasswordModel model)
+        {
+            try
+            {
+                string Email = User.FindFirst("EmailId").Value;
+                if (adminsManager.AdminResetPassword(Email, model))
+                {
+                    return Ok(new ResponseModel<string> { Success = true, Message = "Password reset successfully" });
+                }
+                else
+                {
+                    return BadRequest(new ResponseModel<string> { Success = false, Message = "Password reset failed" });
                 }
             }
             catch (Exception ex)
