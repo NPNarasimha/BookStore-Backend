@@ -10,7 +10,7 @@ namespace ManagerLayer.Interfaces
     {
         public Users RegisterUser(RegisterModel model);
         public bool CheckEmail(string email);
-        public string UserLogin(LoginModel model);
+        public LoginGenaratesTokens UserLogin(LoginModel model);
         public ForgetPasswordModel forgetPassword(string email);
         public bool ResetPassword(string email, ResetPasswordModel model);
     }

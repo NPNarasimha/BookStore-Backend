@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\operationfilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\operationfilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\usersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\usersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,76 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OperationFilters.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\OperationFilters.cs",
-              "RelativeDocumentMoniker": "CommonLayer\\Models\\OperationFilters.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\OperationFilters.cs",
-              "RelativeToolTip": "CommonLayer\\Models\\OperationFilters.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:18:38.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Startup.cs",
-              "RelativeDocumentMoniker": "BookStoreProject\\Startup.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Startup.cs",
-              "RelativeToolTip": "BookStoreProject\\Startup.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAswDkAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:13:47.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminsController.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\AdminsController.cs",
-              "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\AdminsController.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\AdminsController.cs",
-              "RelativeToolTip": "BookStoreProject\\Controllers\\AdminsController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwDsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:07:23.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "BookStoreProject\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T08:46:51.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\UsersRepo.cs",
-              "RelativeDocumentMoniker": "RepositoyLayer\\Services\\UsersRepo.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\UsersRepo.cs",
-              "RelativeToolTip": "RepositoyLayer\\Services\\UsersRepo.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAkwEMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T08:33:52.23Z",
-              "EditorCaption": ""
             }
           ]
         }

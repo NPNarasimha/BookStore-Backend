@@ -15,7 +15,7 @@ using RepositoyLayer.Interfaces;
 
 namespace RepositoyLayer.Services
 {
-    public class UsersRepo:IUsersRepo
+    public class UsersRepo : IUsersRepo
     {
         private readonly IConfiguration config;
         private readonly BookStoreDBContext BookStoreDb;
@@ -39,24 +39,25 @@ namespace RepositoyLayer.Services
             user.FirstName = model.FirstName;
             user.LastName = model.LastName;
             user.Email = model.Email;
-            user.Password =EncryptionPass.EncodePasswordToBase64(model.Password);
+            user.Password = EncryptionPass.EncodePasswordToBase64(model.Password);
             this.BookStoreDb.Users.Add(user);
             BookStoreDb.SaveChanges();
             return user;
         }
 
-        public string UserLogin(LoginModel model)
+        public LoginGenaratesTokens UserLogin(LoginModel model)
         {
-            var user=this.BookStoreDb.Users.FirstOrDefault(x => x.Email == model.Email && x.Password == EncryptionPass.EncodePasswordToBase64(model.Password));
+            var user = this.BookStoreDb.Users.FirstOrDefault(x => x.Email == model.Email && x.Password == EncryptionPass.EncodePasswordToBase64(model.Password));
             if (user == null)
             {
                 return null;
             }
-            else
-            {
-                var token =GenerateToken(user.Email, user.Id,user.Role);
-                return token;
-            }
+            
+                return new LoginGenaratesTokens
+                {
+                    AccessToken = GenerateToken(user.Email, user.Id, user.Role),
+                    RefreshToken = GenerateRefreshToken(user.Email, user.Id, user.Role)
+                };
         }
 
         public ForgetPasswordModel forgetPassword(string email)
@@ -68,7 +69,7 @@ namespace RepositoyLayer.Services
             }
             else
             {
-                var token = GenerateToken(user.Email, user.Id,user.Role);
+                var token = GenerateToken(user.Email, user.Id, user.Role);
                 ForgetPasswordModel forgetPasswordModel = new ForgetPasswordModel();
                 forgetPasswordModel.Email = email;
                 forgetPasswordModel.Token = token;
@@ -90,7 +91,7 @@ namespace RepositoyLayer.Services
                 return true;
             }
         }
-        private string GenerateToken(string email, int userId,string Role)
+        private string GenerateToken(string email, int userId, string Role)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -108,6 +109,22 @@ namespace RepositoyLayer.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-
+        public string GenerateRefreshToken(string email, int userId, string Role)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var claims = new[]
+            {
+                new Claim("EmailId",email),
+                new Claim("UserId",userId.ToString()),
+                new Claim("custom_role", Role)
+            };
+            var token = new JwtSecurityToken(config["Jwt:Issuer"],
+                config["Jwt:Audience"],
+                claims,
+                expires: DateTime.Now.AddDays(6),//Add the days for refreshToken
+                signingCredentials: credentials);
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
     }
 }
