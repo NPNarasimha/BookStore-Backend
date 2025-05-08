@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using ManagerLayer.Services;
@@ -27,7 +28,7 @@ namespace BookStoreProject.Controllers
             {
                 return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can upload books" });
             }
-            var path=Path.Combine(Directory.GetCurrentDirectory(),"BooksCsvFile", "BooksList.csv");
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "BooksCsvFile", "BooksList.csv");
 
             if (!System.IO.File.Exists(path))
             {
@@ -35,8 +36,49 @@ namespace BookStoreProject.Controllers
             }
             booksManager.UploadBooksFromCSV(path);
             return Ok(new ResponseModel<string> { Success = true, Message = "Books uploaded successfully in the DB" });
-
         }
 
+        [Authorize]
+        [HttpGet("getAllBooks")]
+        public IActionResult GetAllBooks()
+        {
+            var books = booksManager.GetAllBooks();
+            if (books.Count == 0)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
+            }
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books", Data = books });
+        }
+        [Authorize]
+        [HttpPost("addbook")]
+        public IActionResult AddBook(BooksModel model)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role == "User")
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can add books" });
+            }
+            if (booksManager.AddBook(model))
+            {
+                return Ok(new ResponseModel<string> { Success = true, Message = "Book added successfully" });
+            }
+            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Added" });
+        }
+
+        [Authorize]
+        [HttpPut("updatebook")]
+        public IActionResult UpdateBook(int id, BooksModel model)
+        {
+            var role=User.FindFirst("custom_role")?.Value;
+            if (role == "User")
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can update books" });
+            }
+            if (booksManager.UpdateBook(id, model))
+            {
+                return Ok(new ResponseModel<string> { Success = true, Message = "Book updated successfully" });
+            }
+            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Updated" });
+        }
     }
 }

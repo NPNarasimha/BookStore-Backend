@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using RepositoyLayer.Interfaces;
 
@@ -16,6 +17,18 @@ namespace ManagerLayer.Services
         public void UploadBooksFromCSV(string path)
         {
             booksRepo.UploadBooksFromCSV(path);
+        }
+        public List<BooksModel> GetAllBooks()
+        {
+            return booksRepo.GetAllBooks();
+        }
+        public bool AddBook(BooksModel model)
+        {
+            return booksRepo.AddBook(model);
+        }
+        public bool UpdateBook(int id, BooksModel model)
+        {
+            return booksRepo.UpdateBook(id, model);
         }
     }
 }

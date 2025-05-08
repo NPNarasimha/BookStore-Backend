@@ -10,7 +10,7 @@ using RepositoyLayer.Interfaces;
 
 namespace RepositoyLayer.Services
 {
-    public class BooksRepo:IBooksRepo
+    public class BooksRepo : IBooksRepo
     {
         private readonly BookStoreDBContext context;
         public BooksRepo(BookStoreDBContext context)
@@ -56,6 +56,63 @@ namespace RepositoyLayer.Services
             context.SaveChanges();
             Console.WriteLine("CSV data loaded successfully.");
         }
-       
+
+
+        public List<BooksModel> GetAllBooks()
+        {
+            return context.Books.OrderBy(b => b.BookName).Select(b => new BooksModel
+            {
+                BookName = b.BookName,
+                Author = b.Author,
+                Description = b.Description,
+                Price = b.Price,
+                DiscountPrice = b.DiscountPrice,
+                Quantity = b.Quantity,
+                BookImage = b.BookImage,
+                AdminUserId = b.AdminUserId,
+                CreatedAt = b.CreatedAt,
+                UpdatedAt = b.UpdatedAt
+            })
+         .ToList();
+        }
+
+        public bool AddBook(BooksModel model)
+        {
+            var book = new Books
+            {
+                BookName = model.BookName,
+                Author = model.Author,
+                Description = model.Description,
+                Price = (int)model.Price,
+                DiscountPrice = (int)model.DiscountPrice,
+                Quantity = model.Quantity,
+                BookImage = model.BookImage,
+                AdminUserId = model.AdminUserId,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now
+            };
+             context.Books.Add(book);
+            return context.SaveChanges()>0;
+        }
+        public bool UpdateBook(int id, BooksModel model)
+        {
+            var book = context.Books.ToList().Find(x => x.BookId == id);
+            if (book != null)
+            {
+                book.BookName = model.BookName;
+                book.Author = model.Author;
+                book.Description = model.Description;
+                book.Price = (int)model.Price;
+                book.DiscountPrice = (int)model.DiscountPrice;
+                book.Quantity = model.Quantity;
+                book.BookImage = model.BookImage;
+                book.AdminUserId = model.AdminUserId;
+                book.UpdatedAt = DateTime.Now;
+                context.Books.Update(book);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }
