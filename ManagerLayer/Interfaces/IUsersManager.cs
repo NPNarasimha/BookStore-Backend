@@ -13,5 +13,6 @@ namespace ManagerLayer.Interfaces
         public LoginGenaratesTokens UserLogin(LoginModel model);
         public ForgetPasswordModel forgetPassword(string email);
         public bool ResetPassword(string email, ResetPasswordModel model);
+        public Users GetUserByEmail(string email);
     }
 }

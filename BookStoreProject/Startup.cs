@@ -103,7 +103,7 @@ namespace BookStoreProject
              */
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookStore API V1");
             });
             app.UseAuthentication();
             app.UseHttpsRedirection();

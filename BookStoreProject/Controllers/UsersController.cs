@@ -60,7 +60,7 @@ namespace BookStoreProject.Controllers
             }
             return Ok(new ResponseModel<LoginGenaratesTokens> { Success = true, Message = model.Email+"Login Success", Data = result });
         }
-        [HttpPost("forgetPassword")]
+        [HttpPost("forgetpassword")]
         public IActionResult ForgetPassword(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
@@ -69,17 +69,17 @@ namespace BookStoreProject.Controllers
             
             if (result == null)
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "Email Not Found" });
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Email not existed Please Enter valid E-mail" });
             }
             else
             {
                 SendEmail send=new SendEmail();
                 send.EmailSend(result.Email, result.Token);
-                return Ok(new ResponseModel<string> { Success = true, Message = "Reset link Sent to Email" });
+                return Ok(new ResponseModel<string> { Success = true, Message = "Reset Password link Sent to Email" });
             }
         }
         [Authorize]
-        [HttpPost("resetPassword")]
+        [HttpPost("resetpassword")]
         public IActionResult ResetPassword(ResetPasswordModel model)
         {
             string Email = User.FindFirst("EmailId").Value;
@@ -88,6 +88,20 @@ namespace BookStoreProject.Controllers
                 return Ok(new ResponseModel<bool> { Success = true, Message = Email + "Password changed Success" });
             }
            return BadRequest(new ResponseModel<bool> { Success = false, Message = "Password Not Changed" });
+        }
+
+        [HttpGet("getuser")]
+        public IActionResult GetUserByEmail(string email)
+        {
+            var result = usersManager.GetUserByEmail(email);
+            if (result == null)
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Invalid email or password" });
+            }
+            else
+            {
+                return Ok(new ResponseModel<Users> { Success = true, Message = "User Found", Data = result });
+            }
         }
     }
 }

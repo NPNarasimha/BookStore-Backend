@@ -91,6 +91,19 @@ namespace RepositoyLayer.Services
                 return true;
             }
         }
+
+        public Users GetUserByEmail(string email)
+        {
+            var user = this.BookStoreDb.Users.ToList().Find(user => user.Email == email);
+            if (user == null)
+            {
+                return null;
+            }
+            else
+            {
+                return user;
+            }
+        }
         private string GenerateToken(string email, int userId, string Role)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));

@@ -87,7 +87,7 @@ namespace BookStoreProject.Controllers
                 {
                     SendEmail send = new SendEmail();
                     send.EmailSend(result.Email, result.Token);
-                    return Ok(new ResponseModel<string> { Success = true, Message = "Reset link Sent to Email" });
+                    return Ok(new ResponseModel<string> { Success = true, Message = "Reset password link Sent to Email" });
                 }
             }
             catch (Exception ex)
