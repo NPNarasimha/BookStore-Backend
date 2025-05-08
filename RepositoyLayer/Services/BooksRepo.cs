@@ -114,5 +114,19 @@ namespace RepositoyLayer.Services
             }
             return false;
         }
+        public bool DeleteBook(int id)
+        {
+            var book = context.Books.ToList().Find(x => x.BookId == id);
+            if (book == null)
+            {
+                return false;
+            }
+            else
+            {
+                context.Books.Remove(book);
+                context.SaveChanges();
+                return true;
+            }
+        }
     }
 }

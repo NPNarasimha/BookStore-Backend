@@ -11,5 +11,6 @@ namespace ManagerLayer.Interfaces
         public List<BooksModel> GetAllBooks();
         public bool AddBook(BooksModel model);
         public bool UpdateBook(int id, BooksModel model);
+        public bool DeleteBook(int id);
     }
 }

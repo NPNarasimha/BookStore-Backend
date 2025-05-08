@@ -80,5 +80,20 @@ namespace BookStoreProject.Controllers
             }
             return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Updated" });
         }
+        [Authorize]
+        [HttpDelete("deletebook")]
+        public IActionResult DeleteBook(int id)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role == "User")
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can delete books" });
+            }
+            if (booksManager.DeleteBook(id))
+            {
+                return Ok(new ResponseModel<string> { Success = true, Message = "Book deleted successfully" });
+            }
+            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Deleted" });
+        }
     }
 }

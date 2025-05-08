@@ -30,5 +30,9 @@ namespace ManagerLayer.Services
         {
             return booksRepo.UpdateBook(id, model);
         }
+        public bool DeleteBook(int id) 
+        { 
+            return booksRepo.DeleteBook(id);
+        }
     }
 }
