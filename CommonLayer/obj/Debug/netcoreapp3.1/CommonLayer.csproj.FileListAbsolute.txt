@@ -8,3 +8,4 @@ C:\Users\Sai Indu\source\repos\BookStoreProject\CommonLayer\obj\Debug\netcoreapp
 C:\Users\Sai Indu\source\repos\BookStoreProject\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.sourcelink.json
 C:\Users\Sai Indu\source\repos\BookStoreProject\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
 C:\Users\Sai Indu\source\repos\BookStoreProject\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\Sai Indu\source\repos\BookStoreProject\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache
