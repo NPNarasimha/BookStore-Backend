@@ -11,7 +11,7 @@ using RepositoyLayer.Entity;
 
 namespace BookStoreProject.Controllers
 {
-    [Route("")]
+    [Route("api/book")]
     [ApiController]
     public class BooksController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpPost("uploadBooks")]
+        [HttpPost]
         public IActionResult UploadingBooks()
         {
             var role = User.FindFirst("custom_role")?.Value;
@@ -41,7 +41,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpGet("getAllBooks")]
+        [HttpGet("getall")]
         public IActionResult GetAllBooks()
         {
 
@@ -53,7 +53,7 @@ namespace BookStoreProject.Controllers
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books", Data = books });
         }
         [Authorize]
-        [HttpGet("getbookbyid")]
+        [HttpGet("{id}")]
         public IActionResult GetBookById(int id)
         {
             var book = booksManager.GetBookById(id);
@@ -64,14 +64,14 @@ namespace BookStoreProject.Controllers
             return Ok(new ResponseModel<BooksModel> { Success = true, Message = "Book found", Data = book });
         }
 
-            [Authorize]
-        [HttpPost("addbook")]
+        [Authorize]
+        [HttpPost("add")]
         public IActionResult AddBook(BooksModel model)
         {
             var role = User.FindFirst("custom_role")?.Value;
             if (role == "User")
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can add books" });
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can add books" });
             }
             if (booksManager.AddBook(model))
             {
@@ -81,13 +81,13 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpPut("updatebook")]
+        [HttpPut("update/{id}")]
         public IActionResult UpdateBook(int id, BooksModel model)
         {
             var role=User.FindFirst("custom_role")?.Value;
             if (role == "User")
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can update books" });
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can update books" });
             }
             if (booksManager.UpdateBook(id, model))
             {
@@ -96,13 +96,13 @@ namespace BookStoreProject.Controllers
             return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Updated" });
         }
         [Authorize]
-        [HttpDelete("deletebook")]
+        [HttpDelete("delete/{id}")]
         public IActionResult DeleteBook(int id)
         {
             var role = User.FindFirst("custom_role")?.Value;
             if (role == "User")
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "Only the admin can delete books" });
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can delete books" });
             }
             if (booksManager.DeleteBook(id))
             {
