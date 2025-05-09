@@ -121,5 +121,17 @@ namespace BookStoreProject.Controllers
             }
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books are sorted in : "+order, Data = books });
         }
+
+        [Authorize]
+        [HttpGet("search-by-author/{author}")]
+        public IActionResult SearchBooksOnAuthor(string author)
+        {
+            var books = booksManager.SearchBooksOnAuthor(author);
+            if (books.Count == 0)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
+            }
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books are sorted in : " + author, Data = books });
+        }
     }
 }

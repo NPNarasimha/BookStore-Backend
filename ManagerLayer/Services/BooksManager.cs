@@ -44,5 +44,9 @@ namespace ManagerLayer.Services
         {
             return booksRepo.SortByPrice(order);
         }
+        public List<BooksModel> SearchBooksOnAuthor(string author)
+        {
+            return booksRepo.SearchBooksOnAuthor(author);
+        }
     }
 }

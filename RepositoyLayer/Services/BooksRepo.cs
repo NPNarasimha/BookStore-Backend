@@ -167,5 +167,23 @@ namespace RepositoyLayer.Services
             }).ToList();
 
         }
+
+        public List<BooksModel> SearchBooksOnAuthor(string author)
+        {
+            var books=context.Books.Where(b=>b.Author.ToLower().Contains(author.ToLower())).ToList();
+            return books.Select(b => new BooksModel
+            {
+                BookName = b.BookName,
+                Author = b.Author,
+                Description = b.Description,
+                Price = b.Price,
+                DiscountPrice = b.DiscountPrice,
+                Quantity = b.Quantity,
+                BookImage = b.BookImage,
+                AdminUserId = b.AdminUserId,
+                CreatedAt = b.CreatedAt,
+                UpdatedAt = b.UpdatedAt
+            }).ToList();
+        }
     }
 }
