@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\ibooksrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\interfaces\\ibooksrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,12 +15,24 @@
       "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\booksmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\ibooksrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\interfaces\\ibooksrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\booksrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\booksrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\booksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\booksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\entity\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\entity\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\bookscsvfile\\bookslist.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -46,11 +54,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Books.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Entity\\Books.cs",
+              "RelativeDocumentMoniker": "RepositoyLayer\\Entity\\Books.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Entity\\Books.cs",
+              "RelativeToolTip": "RepositoyLayer\\Entity\\Books.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA3wB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T05:16:50.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Startup.cs",
+              "RelativeDocumentMoniker": "BookStoreProject\\Startup.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Startup.cs",
+              "RelativeToolTip": "BookStoreProject\\Startup.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T04:52:17.947Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,13 +94,14 @@
               "RelativeDocumentMoniker": "CommonLayer\\Models\\BooksModel.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\BooksModel.cs",
               "RelativeToolTip": "CommonLayer\\Models\\BooksModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T10:50:39.084Z"
+              "WhenOpened": "2025-05-08T10:50:39.084Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "booksList.csv",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\BooksCsvFile\\booksList.csv",
               "RelativeDocumentMoniker": "BookStoreProject\\BooksCsvFile\\booksList.csv",
@@ -78,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UsersRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\UsersRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Services\\UsersRepo.cs",
@@ -90,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "booksList",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\BooksCsvFile\\booksList",
               "RelativeDocumentMoniker": "BookStoreProject\\BooksCsvFile\\booksList",
@@ -102,52 +137,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BooksController.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\BooksController.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\BooksController.cs",
               "RelativeToolTip": "BookStoreProject\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowFsAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwDoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T07:22:56.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IBooksManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IBooksManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Interfaces\\IBooksManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IBooksManager.cs",
               "RelativeToolTip": "ManagerLayer\\Interfaces\\IBooksManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T07:21:41.447Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "BooksManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\BooksManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Services\\BooksManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\BooksManager.cs",
               "RelativeToolTip": "ManagerLayer\\Services\\BooksManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAADwvyIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvygAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T07:21:18.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "IBooksRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IBooksRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Interfaces\\IBooksRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IBooksRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Interfaces\\IBooksRepo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T07:20:45.249Z",
               "EditorCaption": ""
@@ -160,7 +195,7 @@
               "RelativeDocumentMoniker": "RepositoyLayer\\Services\\BooksRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\BooksRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Services\\BooksRepo.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAIwHQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAswE4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T07:20:16.34Z",
               "EditorCaption": ""

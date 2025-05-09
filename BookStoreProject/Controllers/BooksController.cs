@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using ManagerLayer.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RepositoyLayer.Entity;
 
 namespace BookStoreProject.Controllers
 {
@@ -42,6 +44,7 @@ namespace BookStoreProject.Controllers
         [HttpGet("getAllBooks")]
         public IActionResult GetAllBooks()
         {
+
             var books = booksManager.GetAllBooks();
             if (books.Count == 0)
             {
@@ -50,6 +53,18 @@ namespace BookStoreProject.Controllers
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books", Data = books });
         }
         [Authorize]
+        [HttpGet("getbookbyid")]
+        public IActionResult GetBookById(int id)
+        {
+            var book = booksManager.GetBookById(id);
+            if (book == null)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Book not found" });
+            }
+            return Ok(new ResponseModel<BooksModel> { Success = true, Message = "Book found", Data = book });
+        }
+
+            [Authorize]
         [HttpPost("addbook")]
         public IActionResult AddBook(BooksModel model)
         {

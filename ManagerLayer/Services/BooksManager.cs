@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
+using RepositoyLayer.Entity;
 using RepositoyLayer.Interfaces;
 
 namespace ManagerLayer.Services
@@ -33,6 +35,10 @@ namespace ManagerLayer.Services
         public bool DeleteBook(int id) 
         { 
             return booksRepo.DeleteBook(id);
+        }
+        public BooksModel GetBookById(int id)
+        {
+            return booksRepo.GetBookById(id);
         }
     }
 }

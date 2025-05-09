@@ -80,6 +80,7 @@ namespace BookStoreProject
                         ValidAudience = Configuration["Jwt:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Key)
                     };
+
                 });
 
 

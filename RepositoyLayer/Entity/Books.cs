@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RepositoyLayer.Entity
 {
@@ -26,5 +27,6 @@ namespace RepositoyLayer.Entity
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        
     }
 }

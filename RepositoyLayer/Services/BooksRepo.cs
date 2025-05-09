@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using CommonLayer.Models;
 using Microsoft.Extensions.Configuration;
 using RepositoyLayer.Context;
@@ -75,7 +76,27 @@ namespace RepositoyLayer.Services
             })
          .ToList();
         }
-
+        public BooksModel GetBookById(int id)
+        {
+            var book = context.Books.FirstOrDefault(b => b.BookId == id);
+            if (book == null)
+            {
+                return null;
+            }
+            return new BooksModel
+            {
+                BookName = book.BookName,
+                Author = book.Author,
+                Description = book.Description,
+                Price = book.Price,
+                DiscountPrice = book.DiscountPrice,
+                Quantity = book.Quantity,
+                BookImage = book.BookImage,
+                AdminUserId = book.AdminUserId,
+                CreatedAt = book.CreatedAt,
+                UpdatedAt = book.UpdatedAt
+            };
+        }
         public bool AddBook(BooksModel model)
         {
             var book = new Books
