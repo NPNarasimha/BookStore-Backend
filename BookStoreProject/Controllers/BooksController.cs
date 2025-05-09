@@ -84,7 +84,7 @@ namespace BookStoreProject.Controllers
         [HttpPut("update/{id}")]
         public IActionResult UpdateBook(int id, BooksModel model)
         {
-            var role=User.FindFirst("custom_role")?.Value;
+            var role = User.FindFirst("custom_role")?.Value;
             if (role == "User")
             {
                 return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can update books" });
@@ -109,6 +109,17 @@ namespace BookStoreProject.Controllers
                 return Ok(new ResponseModel<string> { Success = true, Message = "Book deleted successfully" });
             }
             return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Deleted" });
+        }
+        [Authorize]
+        [HttpGet("sort-by-price/{order}")]
+        public IActionResult SortByPrice(string order="low")
+        {
+            var books = booksManager.SortByPrice(order);
+            if (books.Count == 0)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
+            }
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books are sorted in : "+order, Data = books });
         }
     }
 }

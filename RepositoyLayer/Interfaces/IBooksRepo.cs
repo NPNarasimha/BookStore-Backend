@@ -15,5 +15,6 @@ namespace RepositoyLayer.Interfaces
         public bool AddBook(BooksModel model);
         public bool UpdateBook(int id, BooksModel model);
         public bool DeleteBook(int id);
+        public List<BooksModel> SortByPrice(string order);
     }
 }

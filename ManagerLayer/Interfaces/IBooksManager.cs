@@ -15,5 +15,6 @@ namespace ManagerLayer.Interfaces
         public bool UpdateBook(int id, BooksModel model);
         public bool DeleteBook(int id);
         public BooksModel GetBookById(int id);
+        public List<BooksModel> SortByPrice(string order);
     }
 }

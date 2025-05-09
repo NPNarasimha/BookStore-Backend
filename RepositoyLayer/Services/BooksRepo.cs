@@ -149,5 +149,23 @@ namespace RepositoyLayer.Services
                 return true;
             }
         }
+
+        public List<BooksModel> SortByPrice(string order)
+        {
+            var bookOrder = order.ToLower() == "high" ? context.Books.OrderByDescending(b => b.Price).ToList() : context.Books.OrderBy(b => b.Price).ToList();
+            return bookOrder.Select(b => new BooksModel{
+                BookName = b.BookName,
+                Author = b.Author,
+                Description = b.Description,
+                Price = b.Price,
+                DiscountPrice = b.DiscountPrice,
+                Quantity = b.Quantity,
+                BookImage = b.BookImage,
+                AdminUserId = b.AdminUserId,
+                CreatedAt = b.CreatedAt,
+                UpdatedAt = b.UpdatedAt
+            }).ToList();
+
+        }
     }
 }

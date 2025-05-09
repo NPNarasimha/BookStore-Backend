@@ -40,5 +40,9 @@ namespace ManagerLayer.Services
         {
             return booksRepo.GetBookById(id);
         }
+        public List<BooksModel> SortByPrice(string order)
+        {
+            return booksRepo.SortByPrice(order);
+        }
     }
 }
