@@ -17,5 +17,6 @@ namespace RepositoyLayer.Interfaces
         public bool DeleteBook(int id);
         public List<BooksModel> SortByPrice(string order);
         public List<BooksModel> SearchBooksOnAuthor(string author);
+        public List<BooksModel> GetRecentAddBook();
     }
 }

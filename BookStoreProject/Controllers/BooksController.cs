@@ -133,5 +133,16 @@ namespace BookStoreProject.Controllers
             }
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books are sorted in : " + author, Data = books });
         }
+        [Authorize]
+        [HttpGet("recentadded")]
+        public IActionResult GetRecentAddBook()
+        {
+            var books = booksManager.GetRecentAddBook();
+            if (books.Count == 0)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
+            }
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "The newly added Books is : ", Data = books });
+        }
     }
 }
