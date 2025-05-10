@@ -1,0 +1,48 @@
+﻿using System;
+using CommonLayer.Models;
+using ManagerLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace BookStoreProject.Controllers
+{
+    [Route("api/carts")]
+    [ApiController]
+    public class CartsController : ControllerBase
+    {
+        private readonly ICartsManager cartsManager;
+        public CartsController(ICartsManager cartsManager)
+        {
+            this.cartsManager = cartsManager;
+        }
+        [Authorize]
+        [HttpPost]
+        public IActionResult AddToCart(CartModel model)
+        {
+            try
+            {
+                var role = User.FindFirst("custom_role")?.Value;
+                if (role != "User")
+                {
+                    return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can add to cart." });
+                }
+                int userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+                if (userId == null)
+                {
+                    return Unauthorized(new ResponseModel<string> { Success = false, Message = "User ID not found." });
+                }
+                var result = cartsManager.AddToCart(userId, model);
+                if (result == null)
+                {
+                    return BadRequest(new ResponseModel<string> { Success = false, Message = "Book not found or insufficient stock." });
+                }
+                return Ok(new ResponseModel<object> { Success = true, Message = "Book added to cart successfully.", Data = result });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
+            }
+        }
+    }
+}
