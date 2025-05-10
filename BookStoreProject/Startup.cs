@@ -80,6 +80,7 @@ namespace BookStoreProject
                         ValidAudience = Configuration["Jwt:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Key)
                     };
+
                 });
 
 
@@ -87,6 +88,8 @@ namespace BookStoreProject
             services.AddTransient<IUsersManager, UsersManager>();
             services.AddTransient<IAdminsRepo, AdminsRepo>();
             services.AddTransient<IAdminsManager, AdminsManager>();
+            services.AddTransient<IBooksRepo, BooksRepo>();
+            services.AddTransient<IBooksManager, BooksManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
