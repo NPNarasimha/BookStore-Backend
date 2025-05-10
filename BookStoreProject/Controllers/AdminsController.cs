@@ -9,7 +9,7 @@ using RepositoyLayer.Entity;
 
 namespace BookStoreProject.Controllers
 {
-    [Route("")]
+    [Route("api/admin")]
     [ApiController]
     public class AdminsController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace BookStoreProject.Controllers
             this.adminsManager = adminsManager;
         }
 
-        [HttpPost("adminregister")]
+        [HttpPost("register")]
         public IActionResult adminRegister(AdminRegisterModel model)
         {
             try
@@ -50,7 +50,7 @@ namespace BookStoreProject.Controllers
                 { Success = false, Message = "An internal error occurred", Data = ex.Message });
             }
         }
-        [HttpPost("adminlogin")]
+        [HttpPost("login")]
         public IActionResult AdminLogin(AdminLoginModel model)
         {
             try
@@ -72,7 +72,7 @@ namespace BookStoreProject.Controllers
             }
         }
 
-        [HttpPost("adminforgotpassword")]
+        [HttpPost("forgotpassword")]
         public IActionResult ForgetPassword(string email)
         {
             try
@@ -97,7 +97,7 @@ namespace BookStoreProject.Controllers
             }
         }
         [Authorize]
-        [HttpPost("adminresetpassword")]
+        [HttpPost("resetpassword")]
 
         public IActionResult AdminResetPassword(AdminResetPasswordModel model)
         {

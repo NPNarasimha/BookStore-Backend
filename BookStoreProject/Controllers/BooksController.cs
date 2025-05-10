@@ -11,7 +11,7 @@ using RepositoyLayer.Entity;
 
 namespace BookStoreProject.Controllers
 {
-    [Route("api/book")]
+    [Route("api/books")]
     [ApiController]
     public class BooksController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpPost]
+        [HttpPost("add-book")]
         public IActionResult UploadingBooks()
         {
             var role = User.FindFirst("custom_role")?.Value;
@@ -41,7 +41,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpGet("getall")]
+        [HttpGet]
         public IActionResult GetAllBooks()
         {
 
@@ -65,7 +65,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpPost("add")]
+        [HttpPost]
         public IActionResult AddBook(BooksModel model)
         {
             var role = User.FindFirst("custom_role")?.Value;
@@ -81,7 +81,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpPut("update/{id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, BooksModel model)
         {
             var role = User.FindFirst("custom_role")?.Value;
@@ -96,7 +96,7 @@ namespace BookStoreProject.Controllers
             return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Updated" });
         }
         [Authorize]
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {
             var role = User.FindFirst("custom_role")?.Value;
@@ -122,19 +122,19 @@ namespace BookStoreProject.Controllers
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books are sorted in : "+order, Data = books });
         }
 
+        //[Authorize]
+        //[HttpGet("search-by-author/{author}")]
+        //public IActionResult SearchBooksOnAuthor(string author)
+        //{
+        //    var books = booksManager.SearchBooksOnAuthor(author);
+        //    if (books.Count == 0)
+        //    {
+        //        return BadRequest(new ResponseModel<string> { Success = false, Message = "Books not found by "+author });
+        //    }
+        //    return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books by author  : " + author, Data = books });
+        //}
         [Authorize]
-        [HttpGet("search-by-author/{author}")]
-        public IActionResult SearchBooksOnAuthor(string author)
-        {
-            var books = booksManager.SearchBooksOnAuthor(author);
-            if (books.Count == 0)
-            {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "Books not found by "+author });
-            }
-            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books by author  : " + author, Data = books });
-        }
-        [Authorize]
-        [HttpGet("recentadded")]
+        [HttpGet("recent-added")]
         public IActionResult GetRecentAddBook()
         {
             var books = booksManager.GetRecentAddBook();
@@ -145,15 +145,15 @@ namespace BookStoreProject.Controllers
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "The newly added Books is : ", Data = books });
         }
         [Authorize]
-        [HttpGet("search-by-name/{bookname}")]
-        public IActionResult GetBookByName(string bookname)
+        [HttpGet("search")]
+        public IActionResult Search(string name)
         {
-            var books = booksManager.GetBookByName(bookname);
+            var books = booksManager.Search(name);
             if (books.Count == 0)
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "Books not found by "+bookname });
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Books not found by "+name });
             }
-            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books by Bookname : " + bookname, Data = books });
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "This are the books by: " + name, Data = books });
         }
     }
 }

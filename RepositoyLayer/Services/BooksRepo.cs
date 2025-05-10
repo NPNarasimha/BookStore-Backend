@@ -168,27 +168,27 @@ namespace RepositoyLayer.Services
 
         }
 
-        public List<BooksModel> SearchBooksOnAuthor(string author)
-        {
-            var books=context.Books.Where(b=>b.Author.ToLower().Contains(author.ToLower())).ToList();
-            return books.Select(b => new BooksModel
-            {
-                BookName = b.BookName,
-                Author = b.Author,
-                Description = b.Description,
-                Price = b.Price,
-                DiscountPrice = b.DiscountPrice,
-                Quantity = b.Quantity,
-                BookImage = b.BookImage,
-                AdminUserId = b.AdminUserId,
-                CreatedAt = b.CreatedAt,
-                UpdatedAt = b.UpdatedAt
-            }).ToList();
-        }
+        //public List<BooksModel> SearchBooksOnAuthor(string author)
+        //{
+        //    var books=context.Books.Where(b=>b.Author.ToLower().Contains(author.ToLower())).ToList();
+        //    return books.Select(b => new BooksModel
+        //    {
+        //        BookName = b.BookName,
+        //        Author = b.Author,
+        //        Description = b.Description,
+        //        Price = b.Price,
+        //        DiscountPrice = b.DiscountPrice,
+        //        Quantity = b.Quantity,
+        //        BookImage = b.BookImage,
+        //        AdminUserId = b.AdminUserId,
+        //        CreatedAt = b.CreatedAt,
+        //        UpdatedAt = b.UpdatedAt
+        //    }).ToList();
+        //}
 
-        public List<BooksModel> GetBookByName(string bookname)
+        public List<BooksModel> Search(string name)
         {
-            var books=context.Books.Where(b=>b.BookName.ToLower().Contains(bookname)).ToList().
+            var books=context.Books.Where(b=>b.BookName.ToLower().Contains(name)||b.Author.ToLower().Contains(name)).ToList().
                 Select(b => new BooksModel
                 {
                     BookName = b.BookName,

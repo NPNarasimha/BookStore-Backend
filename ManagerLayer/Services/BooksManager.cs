@@ -44,17 +44,17 @@ namespace ManagerLayer.Services
         {
             return booksRepo.SortByPrice(order);
         }
-        public List<BooksModel> SearchBooksOnAuthor(string author)
-        {
-            return booksRepo.SearchBooksOnAuthor(author);
-        }
+        //public List<BooksModel> SearchBooksOnAuthor(string author)
+        //{
+        //    return booksRepo.SearchBooksOnAuthor(author);
+        //}
         public List<BooksModel> GetRecentAddBook()
         {
             return booksRepo.GetRecentAddBook();
         }
-        public List<BooksModel> GetBookByName(string bookname)
+        public List<BooksModel> Search(string name)
         {
-            return booksRepo.GetBookByName(bookname);
+            return booksRepo.Search(name);
         }
     }
 }

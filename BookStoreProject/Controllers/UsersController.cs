@@ -9,7 +9,7 @@ using RepositoyLayer.Entity;
 
 namespace BookStoreProject.Controllers
 {
-    [Route("")]
+    [Route("api/user")]
     [ApiController]
     public class UsersController : ControllerBase
     {
