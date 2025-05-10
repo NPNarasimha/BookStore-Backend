@@ -129,9 +129,9 @@ namespace BookStoreProject.Controllers
             var books = booksManager.SearchBooksOnAuthor(author);
             if (books.Count == 0)
             {
-                return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Books not found by "+author });
             }
-            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books are sorted in : " + author, Data = books });
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books by author  : " + author, Data = books });
         }
         [Authorize]
         [HttpGet("recentadded")]
@@ -143,6 +143,17 @@ namespace BookStoreProject.Controllers
                 return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
             }
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "The newly added Books is : ", Data = books });
+        }
+        [Authorize]
+        [HttpGet("search-by-name/{bookname}")]
+        public IActionResult GetBookByName(string bookname)
+        {
+            var books = booksManager.GetBookByName(bookname);
+            if (books.Count == 0)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Books not found by "+bookname });
+            }
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books by Bookname : " + bookname, Data = books });
         }
     }
 }

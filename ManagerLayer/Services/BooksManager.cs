@@ -52,5 +52,9 @@ namespace ManagerLayer.Services
         {
             return booksRepo.GetRecentAddBook();
         }
+        public List<BooksModel> GetBookByName(string bookname)
+        {
+            return booksRepo.GetBookByName(bookname);
+        }
     }
 }

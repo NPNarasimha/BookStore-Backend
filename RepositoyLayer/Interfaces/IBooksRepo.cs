@@ -18,5 +18,6 @@ namespace RepositoyLayer.Interfaces
         public List<BooksModel> SortByPrice(string order);
         public List<BooksModel> SearchBooksOnAuthor(string author);
         public List<BooksModel> GetRecentAddBook();
+        public List<BooksModel> GetBookByName(string bookname);
     }
 }
