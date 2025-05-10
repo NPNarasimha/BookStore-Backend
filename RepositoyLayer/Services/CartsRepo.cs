@@ -65,6 +65,17 @@ namespace RepositoyLayer.Services
             return cartList;
         }
 
+        public bool DeleteCart(int userId, int cartId)
+        {
+            var cartItem = context.Carts.FirstOrDefault(x => x.UserId == userId && x.CartId == cartId);
+            if (cartItem != null)
+            {
+                context.Carts.Remove(cartItem);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
         
     }
 }

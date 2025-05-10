@@ -23,6 +23,10 @@ namespace ManagerLayer.Services
         {
             return cartsRepo.GetCarts(userId);
         }
-
+        public bool DeleteCart(int userId, int cartId)
+        {
+            return cartsRepo.DeleteCart(userId, cartId);
+        }
+        
     }
 }

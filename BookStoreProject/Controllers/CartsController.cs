@@ -72,6 +72,36 @@ namespace BookStoreProject.Controllers
                 return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
             }
         }
+
+        [Authorize]
+        [HttpDelete("{cartId}")]
+        public IActionResult DeleteCart(int cartId)
+        {
+            try
+            {
+                var role = User.FindFirst("custom_role")?.Value;
+                if (role != "User")
+                {
+                    return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can delete from cart." });
+                }
+                var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+                if (userId == null)
+                {
+                    return Unauthorized(new ResponseModel<string> { Success = false, Message = "User ID not found." });
+                }
+                var result = cartsManager.DeleteCart(userId, cartId);
+                if (!result)
+                {
+                    return NotFound(new ResponseModel<string> { Success = false, Message = "Cart item not found." });
+                }
+                return Ok(new ResponseModel<string> { Success = true, Message = "Cart item deleted successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
+            }
+        }
         
+
     }
 }
