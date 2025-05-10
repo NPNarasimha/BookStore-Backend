@@ -55,5 +55,16 @@ namespace RepositoyLayer.Services
             }
         }
 
+        public List<Cart> GetCarts(int userId)
+        {
+            var cartList = context.Carts.Include(x => x.Book).Where(x => x.UserId == userId && !x.IsPurchased).ToList();
+            if (cartList == null)
+            {
+                return null;
+            }
+            return cartList;
+        }
+
+        
     }
 }

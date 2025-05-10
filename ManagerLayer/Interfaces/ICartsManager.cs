@@ -9,5 +9,7 @@ namespace ManagerLayer.Interfaces
     public interface ICartsManager
     {
         public Cart AddToCart(int userId, CartModel model);
+        public List<Cart> GetCarts(int userId);
+        
     }
 }

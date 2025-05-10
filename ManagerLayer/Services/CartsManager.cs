@@ -19,5 +19,10 @@ namespace ManagerLayer.Services
         {
             return cartsRepo.AddToCart(userId, model);
         }
+        public List<Cart> GetCarts(int userId)
+        {
+            return cartsRepo.GetCarts(userId);
+        }
+
     }
 }

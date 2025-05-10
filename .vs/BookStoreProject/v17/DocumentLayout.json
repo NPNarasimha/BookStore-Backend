@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\cartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\cartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\interfaces\\icartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\interfaces\\icartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\cartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\cartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\icartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\cartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\cartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\entity\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UsersManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\UsersManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Services\\UsersManager.cs",
@@ -58,8 +58,7 @@
               "RelativeToolTip": "ManagerLayer\\Services\\UsersManager.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:41:51.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T11:41:51.466Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "RepositoyLayer\\Entity\\Cart.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:39:26.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T11:39:26.814Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "CommonLayer\\Models\\CartModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:27:19.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T11:27:19.246Z"
             },
             {
               "$type": "Document",
@@ -95,59 +92,59 @@
               "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\CartsController.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\CartsController.cs",
               "RelativeToolTip": "BookStoreProject\\Controllers\\CartsController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwBYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAwEoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T10:17:30.085Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ICartsManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\ICartsManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Interfaces\\ICartsManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\ICartsManager.cs",
               "RelativeToolTip": "ManagerLayer\\Interfaces\\ICartsManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T10:15:24.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CartsManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\CartsManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Services\\CartsManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\CartsManager.cs",
               "RelativeToolTip": "ManagerLayer\\Services\\CartsManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T10:15:52.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ICartsRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\ICartsRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Interfaces\\ICartsRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\ICartsRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Interfaces\\ICartsRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T10:14:25.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CartsRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\CartsRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Services\\CartsRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\CartsRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Services\\CartsRepo.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwBMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T10:13:57.847Z",
               "EditorCaption": ""

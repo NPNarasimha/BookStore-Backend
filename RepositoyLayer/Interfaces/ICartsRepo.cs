@@ -9,5 +9,7 @@ namespace RepositoyLayer.Interfaces
     public interface ICartsRepo
     {
         public Cart AddToCart(int userId, CartModel model);
+        public List<Cart> GetCarts(int userId);
+        
     }
 }

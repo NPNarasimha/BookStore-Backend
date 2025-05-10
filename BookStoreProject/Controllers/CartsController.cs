@@ -44,5 +44,34 @@ namespace BookStoreProject.Controllers
                 return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
             }
         }
+        [Authorize]
+        [HttpGet]
+        public IActionResult GetCarts()
+        {
+            try
+            {
+                var role = User.FindFirst("custom_role")?.Value;
+                if (role != "User")
+                {
+                    return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can view cart." });
+                }
+                int userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+                if (userId == null)
+                {
+                    return Unauthorized(new ResponseModel<string> { Success = false, Message = "User ID not found." });
+                }
+                var result = cartsManager.GetCarts(userId);
+                if (result == null || result.Count == 0)
+                {
+                    return NotFound(new ResponseModel<string> { Success = false, Message = "No items in cart." });
+                }
+                return Ok(new ResponseModel<object> { Success = true, Message = "Cart retrieved successfully.", Data = result });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
+            }
+        }
+        
     }
 }
