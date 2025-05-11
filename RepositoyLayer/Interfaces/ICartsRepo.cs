@@ -11,6 +11,7 @@ namespace RepositoyLayer.Interfaces
         public Cart AddToCart(int userId, CartModel model);
         public List<Cart> GetCarts(int userId);
         public bool DeleteCart(int userId, int cartId);
-       
+        public Cart UpdateCartItem(int userId, int CartId, CartModel model);
+        public int GetCartTotal(int userId);
     }
 }

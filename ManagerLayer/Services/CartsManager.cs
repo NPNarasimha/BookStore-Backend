@@ -27,6 +27,13 @@ namespace ManagerLayer.Services
         {
             return cartsRepo.DeleteCart(userId, cartId);
         }
-        
+        public Cart UpdateCartItem(int userId, int CartId, CartModel model)
+        {
+            return cartsRepo.UpdateCartItem(userId, CartId, model);
+        }
+        public int GetCartTotal(int userId)
+        {
+            return cartsRepo.GetCartTotal(userId);
+        }
     }
 }

@@ -76,6 +76,44 @@ namespace RepositoyLayer.Services
             }
             return false;
         }
-        
+        public Cart UpdateCartItem(int userId, int CartId, CartModel model)
+        {
+            var cartItem = context.Carts.FirstOrDefault(x => x.UserId == userId && x.CartId == CartId);
+            var book = context.Books.FirstOrDefault(x => x.BookId == model.BookId);
+            if (cartItem == null || book == null)
+            {
+                return null;
+            }
+            if (model.Quantity > book.Quantity)
+            {
+                return null;
+            }
+            if (model.Quantity == 0)
+            {
+                context.Carts.Remove(cartItem);
+                context.SaveChanges();
+                return null;
+            }
+            cartItem.Quantity = model.Quantity;
+            cartItem.Price = model.Quantity * book.DiscountPrice;
+            context.Carts.Update(cartItem);
+            context.SaveChanges();
+            return cartItem;
+        }
+
+        public int GetCartTotal(int userId)
+        {
+            var cartList = context.Carts.Include(x => x.Book).Where(x => x.UserId == userId && !x.IsPurchased).ToList();
+            if (cartList == null)
+            {
+                return 0;
+            }
+            int total = 0;
+            foreach (var item in cartList)
+            {
+                total += item.Price;
+            }
+            return total;
+        }
     }
 }

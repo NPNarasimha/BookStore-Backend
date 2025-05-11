@@ -65,7 +65,12 @@ namespace BookStoreProject.Controllers
                 {
                     return NotFound(new ResponseModel<string> { Success = false, Message = "No items in cart." });
                 }
-                return Ok(new ResponseModel<object> { Success = true, Message = "Cart retrieved successfully.", Data = result });
+                var data = new
+                {
+                    CartItems = result,
+                    totalPrice=cartsManager.GetCartTotal(userId)
+                };
+                return Ok(new ResponseModel<object> { Success = true, Message = "Cart retrieved successfully.", Data = data });
             }
             catch (Exception ex)
             {
@@ -101,7 +106,57 @@ namespace BookStoreProject.Controllers
                 return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
             }
         }
-        
+        [Authorize]
+        [HttpPut("{cartId}")]
+        public IActionResult UpdateCart(int cartId, CartModel model)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role != "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can update cart." });
+            }
+            var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+            if (userId == null)
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "User not found." });
+            }
+            var result = cartsManager.UpdateCartItem(userId, cartId, model);
+            if (result == null)
+            {
+                return NotFound(new ResponseModel<string> { Success = false, Message = "Cart item not found or insufficient stock." });
+            }
+            return Ok(new ResponseModel<object> { Success = true, Message = "Cart item updated successfully.", Data = result });
 
+        }
+        //[Authorize]
+        //[HttpGet("total-cart-price")]
+        //public IActionResult GetCartTotal()
+        //{
+        //    try
+        //    {
+        //        var role = User.FindFirst("custom_role")?.Value;
+        //        if (role != "User")
+        //        {
+        //            return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can view cart total." });
+        //        }
+        //        var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+        //        if (userId == null)
+        //        {
+        //            return Unauthorized(new ResponseModel<string> { Success = false, Message = "User not found." });
+        //        }
+        //        var result = cartsManager.GetCartTotal(userId);
+        //        if (result == 0)
+        //        {
+        //            return NotFound(new ResponseModel<string> { Success = false, Message = "No items in the cart." });
+        //        }
+        //        return Ok(new ResponseModel<object> { Success = true, Message = "total Price in the Cart.", Data = result });
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
+        //    }
+        //}
+        
     }
 }
