@@ -29,5 +29,17 @@ namespace RepositoyLayer.Services
             return result;
         }
 
+        public bool RemoveFromWishList(int wishListId, int userId)
+        {
+            var wishList = context.WishLists.FirstOrDefault(w => w.WishListId==wishListId && w.userId == userId);
+            if (wishList != null)
+            {
+                context.WishLists.Remove(wishList);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+       
     }
 }
