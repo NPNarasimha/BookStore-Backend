@@ -124,7 +124,7 @@
               "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\WishListController.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\WishListController.cs",
               "RelativeToolTip": "BookStoreProject\\Controllers\\WishListController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:15:55.48Z",
               "EditorCaption": ""
@@ -139,8 +139,7 @@
               "RelativeToolTip": "ManagerLayer\\Interfaces\\IWishListManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:15:12.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:15:12.62Z"
             },
             {
               "$type": "Document",
@@ -152,8 +151,7 @@
               "RelativeToolTip": "ManagerLayer\\Services\\WishListManager.cs",
               "ViewState": "AgIAABMAAAAAAAAAAADwvxoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:14:47.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:14:47.843Z"
             },
             {
               "$type": "Document",
@@ -165,8 +163,7 @@
               "RelativeToolTip": "RepositoyLayer\\Interfaces\\IWishListRepo.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:14:16.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:14:16.382Z"
             },
             {
               "$type": "Document",
@@ -178,8 +175,7 @@
               "RelativeToolTip": "RepositoyLayer\\Services\\WishListRepo.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAqwCoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:13:44.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:13:44.977Z"
             }
           ]
         }

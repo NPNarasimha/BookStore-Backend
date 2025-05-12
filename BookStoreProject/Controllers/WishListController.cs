@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -29,6 +30,14 @@ namespace BookStoreProject.Controllers
             if (userId == null)
             {
                 return Unauthorized(new ResponseModel<string> { Success = false, Message = "Invalid User." });
+            }
+            //this is for already existed in wishList and remove the duplication entries
+            var existedWistList = wishListManager.GetAllWishList(userId).
+                FirstOrDefault(b=>b.BookId == model.BookId);
+            if (existedWistList != null)
+            {
+                return Conflict(new ResponseModel<string> { Success = false, Message = "Book already exists in wishlist." });
+
             }
 
             var result = wishListManager.AddToWishList(userId, model.BookId);
