@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\wishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\wishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\interfaces\\icartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\interfaces\\icartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\wishlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\wishlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\cartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\cartsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\interfaces\\iwishlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\interfaces\\iwishlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\icartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\interfaces\\icartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\cartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\cartsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\managerlayer\\services\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2356DBEE-16E4-4855-A3A5-FCE3C7BB81ED}|ManagerLayer\\ManagerLayer.csproj|solutionrelative:managerlayer\\services\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\entity\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\entity\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\iwishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\interfaces\\iwishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,100 +38,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsersManager.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\UsersManager.cs",
-              "RelativeDocumentMoniker": "ManagerLayer\\Services\\UsersManager.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\UsersManager.cs",
-              "RelativeToolTip": "ManagerLayer\\Services\\UsersManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "WishListController.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\WishListController.cs",
+              "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\WishListController.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\WishListController.cs",
+              "RelativeToolTip": "BookStoreProject\\Controllers\\WishListController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:41:51.466Z"
+              "WhenOpened": "2025-05-12T08:15:55.48Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Entity\\Cart.cs",
-              "RelativeDocumentMoniker": "RepositoyLayer\\Entity\\Cart.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Entity\\Cart.cs",
-              "RelativeToolTip": "RepositoyLayer\\Entity\\Cart.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IWishListManager.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IWishListManager.cs",
+              "RelativeDocumentMoniker": "ManagerLayer\\Interfaces\\IWishListManager.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IWishListManager.cs",
+              "RelativeToolTip": "ManagerLayer\\Interfaces\\IWishListManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:39:26.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CartModel.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\CartModel.cs",
-              "RelativeDocumentMoniker": "CommonLayer\\Models\\CartModel.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\CommonLayer\\Models\\CartModel.cs",
-              "RelativeToolTip": "CommonLayer\\Models\\CartModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:27:19.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CartsController.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\CartsController.cs",
-              "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\CartsController.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\CartsController.cs",
-              "RelativeToolTip": "BookStoreProject\\Controllers\\CartsController.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAmwEgAAAB7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:17:30.085Z",
+              "WhenOpened": "2025-05-12T08:15:12.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ICartsManager.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\ICartsManager.cs",
-              "RelativeDocumentMoniker": "ManagerLayer\\Interfaces\\ICartsManager.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\ICartsManager.cs",
-              "RelativeToolTip": "ManagerLayer\\Interfaces\\ICartsManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Title": "WishListManager.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\WishListManager.cs",
+              "RelativeDocumentMoniker": "ManagerLayer\\Services\\WishListManager.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\WishListManager.cs",
+              "RelativeToolTip": "ManagerLayer\\Services\\WishListManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:15:24.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartsManager.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\CartsManager.cs",
-              "RelativeDocumentMoniker": "ManagerLayer\\Services\\CartsManager.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\CartsManager.cs",
-              "RelativeToolTip": "ManagerLayer\\Services\\CartsManager.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:15:52.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICartsRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\ICartsRepo.cs",
-              "RelativeDocumentMoniker": "RepositoyLayer\\Interfaces\\ICartsRepo.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\ICartsRepo.cs",
-              "RelativeToolTip": "RepositoyLayer\\Interfaces\\ICartsRepo.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:14:25.299Z"
+              "WhenOpened": "2025-05-12T08:14:47.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CartsRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\CartsRepo.cs",
-              "RelativeDocumentMoniker": "RepositoyLayer\\Services\\CartsRepo.cs",
-              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\CartsRepo.cs",
-              "RelativeToolTip": "RepositoyLayer\\Services\\CartsRepo.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAwGcAAAArAAAAAAAAAA==",
+              "Title": "IWishListRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IWishListRepo.cs",
+              "RelativeDocumentMoniker": "RepositoyLayer\\Interfaces\\IWishListRepo.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IWishListRepo.cs",
+              "RelativeToolTip": "RepositoyLayer\\Interfaces\\IWishListRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:13:57.847Z"
+              "WhenOpened": "2025-05-12T08:14:16.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WishListRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\WishListRepo.cs",
+              "RelativeDocumentMoniker": "RepositoyLayer\\Services\\WishListRepo.cs",
+              "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\WishListRepo.cs",
+              "RelativeToolTip": "RepositoyLayer\\Services\\WishListRepo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:13:44.977Z",
+              "EditorCaption": ""
             }
           ]
         }

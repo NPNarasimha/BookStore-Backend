@@ -31,7 +31,7 @@ namespace RepositoyLayer.Services
                 var newQuantity = existingCartItem.Quantity + model.Quantity;
                 if (newQuantity > book.Quantity)
                 {
-                    return null; // Not enough stock
+                    return null; //Not enough stock
                 }
                 // Update the quantity in the cart
                 existingCartItem.Quantity = newQuantity;

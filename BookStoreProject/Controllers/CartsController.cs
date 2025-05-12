@@ -45,6 +45,28 @@ namespace BookStoreProject.Controllers
             }
         }
         [Authorize]
+        [HttpPut("{cartId}")]
+        public IActionResult UpdateCart(int cartId, CartModel model)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role != "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can update cart." });
+            }
+            var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+            if (userId == null)
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "User not found." });
+            }
+            var result = cartsManager.UpdateCartItem(userId, cartId, model);
+            if (result == null)
+            {
+                return NotFound(new ResponseModel<string> { Success = false, Message = "Cart item not found or insufficient stock." });
+            }
+            return Ok(new ResponseModel<object> { Success = true, Message = "Cart item updated successfully.", Data = result });
+
+        }
+        [Authorize]
         [HttpGet]
         public IActionResult GetCarts()
         {
@@ -106,28 +128,7 @@ namespace BookStoreProject.Controllers
                 return StatusCode(500, new ResponseModel<string> { Success = false, Message = ex.Message });
             }
         }
-        [Authorize]
-        [HttpPut("{cartId}")]
-        public IActionResult UpdateCart(int cartId, CartModel model)
-        {
-            var role = User.FindFirst("custom_role")?.Value;
-            if (role != "User")
-            {
-                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can update cart." });
-            }
-            var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
-            if (userId == null)
-            {
-                return Unauthorized(new ResponseModel<string> { Success = false, Message = "User not found." });
-            }
-            var result = cartsManager.UpdateCartItem(userId, cartId, model);
-            if (result == null)
-            {
-                return NotFound(new ResponseModel<string> { Success = false, Message = "Cart item not found or insufficient stock." });
-            }
-            return Ok(new ResponseModel<object> { Success = true, Message = "Cart item updated successfully.", Data = result });
-
-        }
+        
         //[Authorize]
         //[HttpGet("total-cart-price")]
         //public IActionResult GetCartTotal()
