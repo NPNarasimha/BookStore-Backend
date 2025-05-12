@@ -9,5 +9,6 @@ namespace ManagerLayer.Interfaces
     {
         public WishList AddToWishList(int userId, int bookId);
         public bool RemoveFromWishList(int wishListId, int userId);
+        public List<WishList> GetAllWishList(int userId);
     }
 }

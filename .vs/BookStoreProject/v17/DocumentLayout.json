@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\wishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\wishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\bookstoreproject\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D95364AC-275F-4587-BD0E-C71A36385ECE}|BookStoreProject\\BookStoreProject.csproj|solutionrelative:bookstoreproject\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\interfaces\\iwishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\interfaces\\iwishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\repositoylayer\\services\\wishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDCEEEC3-B9DF-40B2-9A7C-D0DBF1D51B4F}|RepositoyLayer\\RepositoyLayer.csproj|solutionrelative:repositoylayer\\services\\wishlistrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{576A0925-A97C-4D39-AC5B-2933EBAA855C}|CommonLayer\\CommonLayer.csproj|c:\\users\\sai indu\\source\\repos\\bookstoreproject\\commonlayer\\models\\wishlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,65 +118,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "WishListController.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\WishListController.cs",
               "RelativeDocumentMoniker": "BookStoreProject\\Controllers\\WishListController.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\BookStoreProject\\Controllers\\WishListController.cs",
               "RelativeToolTip": "BookStoreProject\\Controllers\\WishListController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAqwDEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:15:55.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IWishListManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IWishListManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Interfaces\\IWishListManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Interfaces\\IWishListManager.cs",
               "RelativeToolTip": "ManagerLayer\\Interfaces\\IWishListManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:15:12.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "WishListManager.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\WishListManager.cs",
               "RelativeDocumentMoniker": "ManagerLayer\\Services\\WishListManager.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\ManagerLayer\\Services\\WishListManager.cs",
               "RelativeToolTip": "ManagerLayer\\Services\\WishListManager.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswBYAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvxoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:14:47.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "IWishListRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IWishListRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Interfaces\\IWishListRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Interfaces\\IWishListRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Interfaces\\IWishListRepo.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAoAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:14:16.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "WishListRepo.cs",
               "DocumentMoniker": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\WishListRepo.cs",
               "RelativeDocumentMoniker": "RepositoyLayer\\Services\\WishListRepo.cs",
               "ToolTip": "C:\\Users\\Sai Indu\\source\\repos\\BookStoreProject\\RepositoyLayer\\Services\\WishListRepo.cs",
               "RelativeToolTip": "RepositoyLayer\\Services\\WishListRepo.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAqwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwCoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:13:44.977Z",
               "EditorCaption": ""

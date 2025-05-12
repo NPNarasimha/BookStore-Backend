@@ -18,9 +18,9 @@ namespace BookStoreProject.Controllers
         }
         [Authorize]
         [HttpPost]
-        public IActionResult AddedToWishList(WishListModel model) 
+        public IActionResult AddedToWishList(WishListModel model)
         {
-            var role =User.FindFirst("custom_role")?.Value;
+            var role = User.FindFirst("custom_role")?.Value;
             if (role != "User")
             {
                 return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can add to wishlist." });
@@ -30,7 +30,7 @@ namespace BookStoreProject.Controllers
             {
                 return Unauthorized(new ResponseModel<string> { Success = false, Message = "Invalid User." });
             }
-            
+
             var result = wishListManager.AddToWishList(userId, model.BookId);
             if (result == null)
             {
@@ -58,6 +58,27 @@ namespace BookStoreProject.Controllers
                 return BadRequest(new ResponseModel<string> { Success = false, Message = "Failed to remove book from wishlist." });
             }
             return Ok(new ResponseModel<string> { Success = true, Message = "Book removed from wishlist successfully." });
+        }
+        [Authorize]
+        [HttpGet]
+        public IActionResult GetAllWishList()
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role != "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can view wishlist." });
+            }
+            var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+            if (userId == null)
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Invalid User." });
+            }
+            var result = wishListManager.GetAllWishList(userId);
+            if (result == null || result.Count == 0)
+            {
+                return NotFound(new ResponseModel<string> { Success = false, Message = "No books found in wishlist." });
+            }
+            return Ok(new ResponseModel<object> { Success = true, Message = "Wishlist retrieved successfully.", Data = result });
         }
     }
 }

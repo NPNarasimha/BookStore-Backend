@@ -40,6 +40,10 @@ namespace RepositoyLayer.Services
             }
             return false;
         }
-       
+        public List<WishList> GetAllWishList(int userId)
+        {
+            var wishList = context.WishLists.Include(w => w.Book).Where(w => w.userId == userId).ToList();
+            return wishList;
+        }
     }
 }
