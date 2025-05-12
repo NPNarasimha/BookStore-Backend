@@ -1,4 +1,7 @@
-﻿using ManagerLayer.Interfaces;
+﻿using System;
+using CommonLayer.Models;
+using ManagerLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +15,28 @@ namespace BookStoreProject.Controllers
         public WishListController(IWishListManager wishListManager)
         {
             this.wishListManager = wishListManager;
+        }
+        [Authorize]
+        [HttpPost]
+        public IActionResult AddedToWishList(WishListModel model) 
+        {
+            var role =User.FindFirst("custom_role")?.Value;
+            if (role != "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can add to wishlist." });
+            }
+            var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+            if (userId == null)
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Invalid User." });
+            }
+            
+            var result = wishListManager.AddToWishList(userId, model.BookId);
+            if (result == null)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Failed to add book to wishlist." });
+            }
+            return Ok(new ResponseModel<object> { Success = true, Message = "Book added to wishlist successfully.", Data = result });
         }
     }
 }

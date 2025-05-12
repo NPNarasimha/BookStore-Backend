@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using ManagerLayer.Interfaces;
+using RepositoyLayer.Entity;
 using RepositoyLayer.Interfaces;
 
 namespace ManagerLayer.Services
@@ -12,6 +13,10 @@ namespace ManagerLayer.Services
         public WishListManager(IWishListRepo wishListRepo)
         {
             this.wishListRepo = wishListRepo;
+        }
+        public WishList AddToWishList(int userId, int bookId)
+        {
+            return wishListRepo.AddToWishList(userId, bookId);
         }
     }
 }
