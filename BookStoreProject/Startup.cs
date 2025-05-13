@@ -94,6 +94,8 @@ namespace BookStoreProject
             services.AddTransient<ICartsManager, CartsManager>();
             services.AddTransient<IWishListRepo, WishListRepo>();
             services.AddTransient<IWishListManager, WishListManager>();
+            services.AddTransient<IPurcheseRepo, PurcheseRepo>();
+            services.AddTransient<IPurcheseManager, PurcheseManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
