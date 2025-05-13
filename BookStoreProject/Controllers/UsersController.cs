@@ -58,7 +58,7 @@ namespace BookStoreProject.Controllers
                 return Unauthorized(new ResponseModel<string>
                 { Success = false, Message = "Invalid email or password" });
             }
-            return Ok(new ResponseModel<LoginGenaratesTokens> { Success = true, Message = model.Email+"Login Success", Data = result });
+            return Ok(new ResponseModel<LoginGenaratesTokens> { Success = true, Message =model.Email+" Login Success", Data = result });
         }
         [HttpPost("forgetpassword")]
         public IActionResult ForgetPassword(string email)

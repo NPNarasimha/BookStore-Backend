@@ -22,7 +22,7 @@ namespace BookStoreProject.Controllers
         }
 
         [Authorize]
-        [HttpPost("add-book")]
+        [HttpPost]
         public IActionResult UploadingBooks()
         {
             var role = User.FindFirst("custom_role")?.Value;
@@ -39,7 +39,40 @@ namespace BookStoreProject.Controllers
             booksManager.UploadBooksFromCSV(path);
             return Ok(new ResponseModel<string> { Success = true, Message = "Books uploaded successfully in the DB" });
         }
+        [Authorize]
+        [HttpPost("add-book")]
+        public IActionResult AddBook(BooksModel model)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role == "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can add books" });
+            }
+            if (booksManager.AddBook(model))
+            {
+                return Ok(new ResponseModel<string> { Success = true, Message = "Book added successfully" });
+            }
+            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Added" });
+        }
+        
 
+        
+
+        [Authorize]
+        [HttpPut("{id}")]
+        public IActionResult UpdateBook(int id, BooksModel model)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role == "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can update books" });
+            }
+            if (booksManager.UpdateBook(id, model))
+            {
+                return Ok(new ResponseModel<string> { Success = true, Message = "Book updated successfully" });
+            }
+            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Updated" });
+        }
         [Authorize]
         [HttpGet]
         public IActionResult GetAllBooks()
@@ -62,38 +95,6 @@ namespace BookStoreProject.Controllers
                 return BadRequest(new ResponseModel<string> { Success = false, Message = "Book not found" });
             }
             return Ok(new ResponseModel<BooksModel> { Success = true, Message = "Book found", Data = book });
-        }
-
-        [Authorize]
-        [HttpPost]
-        public IActionResult AddBook(BooksModel model)
-        {
-            var role = User.FindFirst("custom_role")?.Value;
-            if (role == "User")
-            {
-                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can add books" });
-            }
-            if (booksManager.AddBook(model))
-            {
-                return Ok(new ResponseModel<string> { Success = true, Message = "Book added successfully" });
-            }
-            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Added" });
-        }
-
-        [Authorize]
-        [HttpPut("{id}")]
-        public IActionResult UpdateBook(int id, BooksModel model)
-        {
-            var role = User.FindFirst("custom_role")?.Value;
-            if (role == "User")
-            {
-                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can update books" });
-            }
-            if (booksManager.UpdateBook(id, model))
-            {
-                return Ok(new ResponseModel<string> { Success = true, Message = "Book updated successfully" });
-            }
-            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Updated" });
         }
         [Authorize]
         [HttpDelete("{id}")]
