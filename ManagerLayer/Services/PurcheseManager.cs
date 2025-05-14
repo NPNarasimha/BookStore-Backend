@@ -18,5 +18,9 @@ namespace ManagerLayer.Services
         {
             return purcheseRepo.AddToPurchese(userId, cartid);
         }
+        public List<Purchese> GetAllPurchese(int userId)
+        {
+            return purcheseRepo.GetAllPurchese(userId);
+        }
     }
 }

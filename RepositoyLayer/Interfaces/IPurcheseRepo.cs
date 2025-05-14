@@ -8,5 +8,6 @@ namespace RepositoyLayer.Interfaces
     public interface IPurcheseRepo
     {
         public Purchese AddToPurchese(int userId, int cartid);
+        public List<Purchese> GetAllPurchese(int userId);
     }
 }

@@ -96,6 +96,16 @@ namespace BookStoreProject
             services.AddTransient<IWishListManager, WishListManager>();
             services.AddTransient<IPurcheseRepo, PurcheseRepo>();
             services.AddTransient<IPurcheseManager, PurcheseManager>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowOrigin",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -116,6 +126,7 @@ namespace BookStoreProject
             });
             app.UseAuthentication();
             app.UseHttpsRedirection();
+            app.UseCors("AllowOrigin");
 
             app.UseRouting();
 

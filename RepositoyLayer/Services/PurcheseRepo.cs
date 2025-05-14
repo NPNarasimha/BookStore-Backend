@@ -38,5 +38,9 @@ namespace RepositoyLayer.Services
             context.SaveChanges();
             return purchese;
         }
+        public List<Purchese> GetAllPurchese(int userId)
+        {
+            return context.Purcheses.Include(p => p.Book).Where(p => p.UserId == userId).ToList();
+        }
     }
 }

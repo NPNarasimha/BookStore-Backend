@@ -37,5 +37,27 @@ namespace BookStoreProject.Controllers
             }
             return Ok(new ResponseModel<object> { Success = true, Message = "Book purchased successfully.", Data = result });
         }
+        [Authorize]
+        [HttpGet]
+        public IActionResult GetAllPurchese()
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role != "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only Users can purchase." });
+            }
+            var userId = Convert.ToInt32(User.FindFirst("UserId")?.Value);
+            if (userId == null)
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Invalid User." });
+            }
+            var result = purcheseManager.GetAllPurchese(userId);
+            if (result == null)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "No Purchese found" });
+            }
+            return Ok(new ResponseModel<object> { Success = true, Message = "Purchese retrieved successfully.", Data = result });
+        }
+
     }
 }

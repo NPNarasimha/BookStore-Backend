@@ -8,5 +8,6 @@ namespace ManagerLayer.Interfaces
     public interface IPurcheseManager
     {
         public Purchese AddToPurchese(int userId, int cartid);
+        public List<Purchese> GetAllPurchese(int userId);
     }
 }
