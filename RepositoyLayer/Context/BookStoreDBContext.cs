@@ -16,5 +16,6 @@ namespace RepositoyLayer.Context
 
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<Purchese> Purcheses { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }

@@ -96,6 +96,8 @@ namespace BookStoreProject
             services.AddTransient<IWishListManager, WishListManager>();
             services.AddTransient<IPurcheseRepo, PurcheseRepo>();
             services.AddTransient<IPurcheseManager, PurcheseManager>();
+            services.AddTransient<ICustomerRepo, CustomerRepo>();
+            services.AddTransient<ICustomerManager, CustomerManager>();
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "AllowOrigin",
