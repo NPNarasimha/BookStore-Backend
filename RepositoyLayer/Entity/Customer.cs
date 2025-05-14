@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace RepositoyLayer.Entity
 {
@@ -13,6 +14,7 @@ namespace RepositoyLayer.Entity
         public int CustomerId { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
+        [JsonIgnore]
         public virtual Users User { get; set; }
         public string FullName { get; set; }
         public string MobileNumber { get; set; }
