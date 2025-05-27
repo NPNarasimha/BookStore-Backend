@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AspNetCoreRateLimit;
 using CommonLayer.Models;
 using ManagerLayer.Interfaces;
 using ManagerLayer.Services;
@@ -82,6 +83,34 @@ namespace BookStoreProject
                     };
 
                 });
+            services.AddMemoryCache();
+
+            services.Configure<IpRateLimitOptions>(options =>
+            {
+                options.EnableEndpointRateLimiting = true;
+                options.StackBlockedRequests = false;
+                options.HttpStatusCode = 429;
+                options.RealIpHeader = "X-Real-IP";
+                options.ClientIdHeader = "X-ClientId";
+                options.GeneralRules = new List<RateLimitRule>
+    {
+        new RateLimitRule
+        {
+            Endpoint = "*",          // Apply to all endpoints
+            Period = "10s",          // Every 10 seconds
+            Limit = 2                // Allow only 2 requests per period
+        }
+    };
+            });
+
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
+
+            services.AddInMemoryRateLimiting();
+
+
 
 
             services.AddTransient<IUsersRepo, UsersRepo>();
@@ -127,6 +156,7 @@ namespace BookStoreProject
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookStore API V1");
             });
             app.UseAuthentication();
+            app.UseIpRateLimiting();
             app.UseHttpsRedirection();
             app.UseCors("AllowOrigin");
 
