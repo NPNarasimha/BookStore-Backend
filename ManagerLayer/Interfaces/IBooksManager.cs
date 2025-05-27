@@ -11,13 +11,17 @@ namespace ManagerLayer.Interfaces
     {
         public void UploadBooksFromCSV(string path);
         public List<BooksModel> GetAllBooks();
-        public bool AddBook(BooksModel model);
-        public bool UpdateBook(int id, BooksModel model);
+        public bool AddBook(AddBookModel model);
+        public bool UpdateBook(int id, AddBookModel model);
         public bool DeleteBook(int id);
         public BooksModel GetBookById(int id);
         public List<BooksModel> SortByPrice(string order);
         //public List<BooksModel> SearchBooksOnAuthor(string author);
         public List<BooksModel> GetRecentAddBook();
         public List<BooksModel> Search(string name);
+        public List<BooksModel> StoredProcGetAllBooks();
+        public bool AddBookWithStoredProc(AddBookModel model);
+        public BooksModel GetBookByIdProc(int id);
+       
     }
 }

@@ -41,7 +41,7 @@ namespace BookStoreProject.Controllers
         }
         [Authorize]
         [HttpPost("add-book")]
-        public IActionResult AddBook(BooksModel model)
+        public IActionResult AddBook(AddBookModel model)
         {
             var role = User.FindFirst("custom_role")?.Value;
             if (role == "User")
@@ -60,7 +60,7 @@ namespace BookStoreProject.Controllers
 
         [Authorize]
         [HttpPut("{id}")]
-        public IActionResult UpdateBook(int id, BooksModel model)
+        public IActionResult UpdateBook(int id, AddBookModel model)
         {
             var role = User.FindFirst("custom_role")?.Value;
             if (role == "User")
@@ -156,5 +156,43 @@ namespace BookStoreProject.Controllers
             }
             return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "This are the books by: " + name, Data = books });
         }
+        [Authorize]
+        [HttpGet("stored-proc")]
+        public IActionResult StoredProcGetAllBooks()
+        {
+            var books = booksManager.StoredProcGetAllBooks();
+            if (books.Count == 0)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "No books" });
+            }
+            return Ok(new ResponseModel<List<BooksModel>> { Success = true, Message = "All books", Data = books });
+        }
+        [Authorize]
+        [HttpPost("stored-proc/add-book")]
+        public IActionResult AddBookWithStoredProc(AddBookModel model)
+        {
+            var role = User.FindFirst("custom_role")?.Value;
+            if (role == "User")
+            {
+                return Unauthorized(new ResponseModel<string> { Success = false, Message = "Only the admin can add books" });
+            }
+            if (booksManager.AddBookWithStoredProc(model))
+            {
+                return Ok(new ResponseModel<string> { Success = true, Message = "Book added successfully" });
+            }
+            return BadRequest(new ResponseModel<string> { Success = false, Message = "Book Is Not Added" });
+        }
+        [Authorize]
+        [HttpGet("stored-proc/{bookid}")]
+        public IActionResult GetBookByIdProc(int bookid)
+        {
+            var book = booksManager.GetBookByIdProc(bookid);
+            if (book == null)
+            {
+                return BadRequest(new ResponseModel<string> { Success = false, Message = "Book not found" });
+            }
+            return Ok(new ResponseModel<BooksModel> { Success = true, Message = "Book found", Data = book });
+        }
+        
     }
 }

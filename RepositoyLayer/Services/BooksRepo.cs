@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommonLayer.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using RepositoyLayer.Context;
 using RepositoyLayer.Entity;
@@ -63,6 +65,7 @@ namespace RepositoyLayer.Services
         {
             return context.Books.OrderBy(b => b.BookName).Select(b => new BooksModel
             {
+                BookId = b.BookId,
                 BookName = b.BookName,
                 Author = b.Author,
                 Description = b.Description,
@@ -85,6 +88,7 @@ namespace RepositoyLayer.Services
             }
             return new BooksModel
             {
+                BookId = book.BookId,
                 BookName = book.BookName,
                 Author = book.Author,
                 Description = book.Description,
@@ -97,7 +101,7 @@ namespace RepositoyLayer.Services
                 UpdatedAt = book.UpdatedAt
             };
         }
-        public bool AddBook(BooksModel model)
+        public bool AddBook(AddBookModel model)
         {
             var book = new Books
             {
@@ -115,7 +119,7 @@ namespace RepositoyLayer.Services
              context.Books.Add(book);
             return context.SaveChanges()>0;
         }
-        public bool UpdateBook(int id, BooksModel model)
+        public bool UpdateBook(int id, AddBookModel model)
         {
             var book = context.Books.ToList().Find(x => x.BookId == id);
             if (book != null)
@@ -222,5 +226,82 @@ namespace RepositoyLayer.Services
             }).ToList();
             return recentBook;
         }
+
+        public List<BooksModel> StoredProcGetAllBooks()
+        {
+            var books = context.Books
+                      .FromSqlRaw("EXEC GetAllBooksProcedure")
+                      .ToList();
+
+            var bookModels = books.Select(b => new BooksModel
+            {
+                BookId = b.BookId,
+                BookName = b.BookName,
+                Author = b.Author,
+                Description = b.Description,
+                Price = b.Price,
+                DiscountPrice = b.DiscountPrice,
+                Quantity = b.Quantity,
+                BookImage = b.BookImage,
+                AdminUserId = b.AdminUserId,
+                CreatedAt = b.CreatedAt,
+                UpdatedAt = b.UpdatedAt
+            }).ToList();
+
+            return bookModels;
+        }
+
+        public BooksModel GetBookByIdProc(int id)
+        {
+            var books = context.Books
+                      .FromSqlRaw("EXEC GetByIdProcedure @id", new SqlParameter("@id", id)).AsEnumerable().FirstOrDefault();
+            var book = books;
+            if (book == null)
+            {
+                return null;
+            }
+            return new BooksModel
+            {
+                BookId = book.BookId,
+                BookName = book.BookName,
+                Author = book.Author,
+                Description = book.Description,
+                Price = book.Price,
+                DiscountPrice = book.DiscountPrice,
+                Quantity = book.Quantity,
+                BookImage = book.BookImage,
+                AdminUserId = book.AdminUserId,
+                CreatedAt = book.CreatedAt,
+                UpdatedAt = book.UpdatedAt
+            };
+        }
+        public bool AddBookWithStoredProc(AddBookModel model)
+        {
+            var book = new Books
+            {
+                BookName = model.BookName,
+                Author = model.Author,
+                Description = model.Description,
+                Price = (int)model.Price,
+                DiscountPrice = (int)model.DiscountPrice,
+                Quantity = model.Quantity,
+                BookImage = model.BookImage,
+                AdminUserId = model.AdminUserId,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now
+            };
+            var result = context.Database.ExecuteSqlRaw("EXEC AddBookProcedure @BookName, @Author, @Description, @Price, @DiscountPrice, @Quantity, @BookImage, @AdminUserId",
+                new SqlParameter("@BookName", book.BookName),
+                new SqlParameter("@Author", book.Author),
+                new SqlParameter("@Description", book.Description),
+                new SqlParameter("@Price", book.Price),
+                new SqlParameter("@DiscountPrice", book.DiscountPrice),
+                new SqlParameter("@Quantity", book.Quantity),
+                new SqlParameter("@BookImage", book.BookImage),
+                new SqlParameter("@AdminUserId", book.AdminUserId));
+            //if row is effected then return true
+            return result > 0;
+        }
+        
     }
 }

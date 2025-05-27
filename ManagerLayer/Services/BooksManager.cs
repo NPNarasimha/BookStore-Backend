@@ -24,11 +24,11 @@ namespace ManagerLayer.Services
         {
             return booksRepo.GetAllBooks();
         }
-        public bool AddBook(BooksModel model)
+        public bool AddBook(AddBookModel model)
         {
             return booksRepo.AddBook(model);
         }
-        public bool UpdateBook(int id, BooksModel model)
+        public bool UpdateBook(int id, AddBookModel model)
         {
             return booksRepo.UpdateBook(id, model);
         }
@@ -56,5 +56,19 @@ namespace ManagerLayer.Services
         {
             return booksRepo.Search(name);
         }
+        public List<BooksModel> StoredProcGetAllBooks()
+        {
+            return booksRepo.StoredProcGetAllBooks();
+        }
+        public bool AddBookWithStoredProc(AddBookModel model)
+        {
+            return booksRepo.AddBookWithStoredProc(model);
+        }
+        public BooksModel GetBookByIdProc(int id)
+        {
+            return booksRepo.GetBookByIdProc(id);
+
+        }
+        
     }
 }
